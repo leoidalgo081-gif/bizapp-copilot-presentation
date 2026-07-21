@@ -16,21 +16,19 @@
     "image": "slides_pdf_images/slide_10.png"
   },
   {
-    "id": "slide_11",
+    "id": "quiz_1",
     "type": "quiz",
-    "title": "Pergunta 1: Os Riscos da Inteligência Artificial",
-    "question": "Quais riscos isso traria se não implementar segurança para IA?",
+    "title": "Pergunta 1: Os Riscos da IA nas Empresas",
+    "question": "Quais os principais riscos para uma empresa ao liberar IA sem governança prévia?",
     "options": [
-      "Vazamento de dados confidenciais e estratégicos (financeiros, RH, etc).",
-      "Violação de leis de privacidade, como a LGPD, ao expor dados pessoais.",
-      "Amplificação de acessos indevidos através de permissões herdadas incorretas.",
-      "Danos irreparáveis à reputação da marca e perda de confiança de clientes.",
-      "Todas as alternativas acima representam riscos críticos de não agir."
+      "Vazamento de dados estratégicos, violação da LGPD e oversharing por permissões legadas.",
+      "Redução da velocidade da conexão de internet corporativa.",
+      "Incompatibilidade física entre os computadores Windows e Mac.",
+      "Aumento no consumo elétrico dos servidores de e-mail."
     ],
-    "correct": "all",
-    "image": "slides_pdf_images/slide_11.png",
-    "explanation": "Todas as opções estão corretas! O oversharing (compartilhamento excessivo) sem governança permite que uma IA acesse informações que deveriam ser restritas, gerando graves incidentes regulatórios, financeiros e de imagem.",
-    "points": 1000
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Exato! Sem governança, o Copilot herda permissões mal configuradas e pode expor dados restritos a qualquer funcionário."
   },
   {
     "id": "slide_13",
@@ -41,12 +39,42 @@
     "image": "slides_pdf_images/slide_13.png"
   },
   {
+    "id": "quiz_2",
+    "type": "quiz",
+    "title": "Pergunta 2: Responsabilidade em Incidentes de IA",
+    "question": "Se o Diretor descobre que relatórios financeiros vazaram via Copilot porque a pasta estava aberta a 'Todos', quem é o responsável?",
+    "options": [
+      "A Governança de TI e Segurança da empresa, por não alinhar o escopo do SharePoint e as regras do Purview.",
+      "Apenas o Diretor, pois ele deveria ter trancado os arquivos.",
+      "A Microsoft, por ter disponibilizado a ferramenta de busca de IA.",
+      "Apenas o funcionário recém-contratado que fez a pergunta à IA."
+    ],
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Correto! A segurança da IA é uma responsabilidade interna de Governança de TI da empresa (Matriz Compartilhada)."
+  },
+  {
     "id": "slide_14",
     "type": "content",
     "title": "Slide 14",
     "subtitle": "",
     "text": "",
     "image": "slides_pdf_images/slide_14.png"
+  },
+  {
+    "id": "quiz_3",
+    "type": "quiz",
+    "title": "Pergunta 3: Fundamento do Copilot",
+    "question": "Qual o primeiro passo indispensável antes de distribuir licenças do Copilot para a equipe?",
+    "options": [
+      "Sanear permissões legadas e estruturar a governança de dados no Purview e SharePoint.",
+      "Confiar exclusivamente que a engenharia de prompt do usuário irá impedir vazamentos.",
+      "Habilitar o Copilot apenas para a equipe de TI e bloquear os diretores.",
+      "Assinar um termo de responsabilidade e liberar o ambiente sem travas."
+    ],
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Perfeito! Sanear permissões e rotular dados sensíveis evita que o Copilot encontre informações confidenciais."
   },
   {
     "id": "slide_16",
@@ -57,12 +85,42 @@
     "image": "slides_pdf_images/slide_16.png"
   },
   {
+    "id": "quiz_purview",
+    "type": "quiz",
+    "title": "Desafio 1: Microsoft Purview (DLP)",
+    "question": "Um funcionário tenta copiar dados de cartão de crédito de uma planilha e enviar para o ChatGPT público ou e-mail externo. O que bloqueia?",
+    "options": [
+      "O Microsoft Purview Data Loss Prevention (DLP), que detecta a sensibilidade e bloqueia a exfiltração em tempo real.",
+      "O Microsoft Defender Antivírus local instalado na máquina.",
+      "A auditoria manual semanal da equipe de compliance.",
+      "O bloqueio genérico de downloads do navegador corporativo."
+    ],
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Excelente! O Purview DLP bloqueia e criptografa a exfiltração de dados confidenciais instantaneamente!"
+  },
+  {
     "id": "slide_17",
     "type": "content",
     "title": "Slide 17",
     "subtitle": "",
     "text": "",
     "image": "slides_pdf_images/slide_17.png"
+  },
+  {
+    "id": "quiz_5",
+    "type": "quiz",
+    "title": "Pergunta 5: Rotulagem de Sensibilidade",
+    "question": "Como o Purview garante que documentos marcados como 'Confidencial' não sejam exibidos para estagiários no Copilot?",
+    "options": [
+      "Através de Rótulos de Sensibilidade (Sensitivity Labels) que aplicam criptografia e restrição de acesso nativas.",
+      "Alterando o nome do arquivo para incluir a palavra 'SEGREDO'.",
+      "Movendo o arquivo para uma lixeira oculta no computador.",
+      "Excluindo a conta de e-mail dos estagiários."
+    ],
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Exato! Os Rótulos de Sensibilidade do Purview protegem o documento onde quer que ele vá."
   },
   {
     "id": "slide_18",
@@ -73,6 +131,21 @@
     "image": "slides_pdf_images/slide_18.png"
   },
   {
+    "id": "quiz_sharepoint",
+    "type": "quiz",
+    "title": "Desafio 2: SharePoint SAM & Oversharing",
+    "question": "Um site antigo do SharePoint continha dados de salários acessíveis a 'Todos'. Como evitar que o Copilot indexe esses dados?",
+    "options": [
+      "Aplicar Restrição de Acesso ao Site (Site Access Restriction) e governança de Oversharing via SharePoint SAM.",
+      "Desativar a busca do Windows 11 no computador.",
+      "Excluir o histórico de conversas do Copilot ao final do expediente.",
+      "Mudar a extensão do arquivo financeiro de .xlsx para .csv."
+    ],
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Correto! O SharePoint SAM permite trancar sites inteiros e limitar o alcance da busca do Copilot."
+  },
+  {
     "id": "slide_19",
     "type": "content",
     "title": "Slide 19",
@@ -81,12 +154,19 @@
     "image": "slides_pdf_images/slide_19.png"
   },
   {
-    "id": "slide_20",
-    "type": "content",
-    "title": "Slide 20",
-    "subtitle": "",
-    "text": "",
-    "image": "slides_pdf_images/slide_20.png"
+    "id": "quiz_7",
+    "type": "quiz",
+    "title": "Pergunta 7: Restricted SharePoint Search",
+    "question": "O recurso 'Restricted SharePoint Search' serve especificamente para:",
+    "options": [
+      "Limitar temporariamente o alcance da busca do Copilot a uma lista de sites aprovados pela TI.",
+      "Bloquear o acesso dos usuários à internet externa.",
+      "Impedir que os usuários salvem arquivos na área de trabalho.",
+      "Desativar o Microsoft Teams em celulares Android."
+    ],
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Excelente! O Restricted Search é ideal para a fase inicial de implantação do Copilot."
   },
   {
     "id": "slide_21",
@@ -97,12 +177,42 @@
     "image": "slides_pdf_images/slide_21.png"
   },
   {
+    "id": "quiz_entra",
+    "type": "quiz",
+    "title": "Desafio 3: Microsoft Entra ID (Zero Trust)",
+    "question": "Um atacante tenta utilizar credenciais vazadas para logar no Copilot corporativo a partir de um país anômalo. O que barra o acesso?",
+    "options": [
+      "Políticas de Acesso Condicional (Conditional Access) do Entra ID com verificação de risco e MFA.",
+      "O filtro de SPAM e Phishing do Exchange Online.",
+      "A alteração preventiva da senha de Wi-Fi da sede.",
+      "A criptografia de disco BitLocker no notebook."
+    ],
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Perfeito! O Entra ID analisa localização, IP e risco do login em tempo real!"
+  },
+  {
     "id": "slide_22",
     "type": "content",
     "title": "Slide 22",
     "subtitle": "",
     "text": "",
     "image": "slides_pdf_images/slide_22.png"
+  },
+  {
+    "id": "quiz_9",
+    "type": "quiz",
+    "title": "Pergunta 9: Autenticação MFA & Riscos",
+    "question": "Por que o Acesso Condicional do Entra ID é superior a senhas tradicionais na proteção de IA?",
+    "options": [
+      "Porque avalia continuamente o risco do dispositivo, local, aplicativo e exige MFA dinamicamente.",
+      "Porque obriga o usuário a mudar a senha a cada 10 minutos.",
+      "Porque impede que o usuário abra o navegador Google Chrome.",
+      "Porque apaga os dados do computador se a senha for errada uma vez."
+    ],
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Correto! O Acesso Condicional analisa múltiplos sinais de contexto antes de conceder acesso."
   },
   {
     "id": "slide_23",
@@ -113,12 +223,43 @@
     "image": "slides_pdf_images/slide_23.png"
   },
   {
+    "id": "quiz_intune",
+    "type": "quiz",
+    "isSandbox": true,
+    "title": "Desafio 4: Microsoft Intune (MAM & BYOD)",
+    "question": "Em um celular pessoal (BYOD), o usuário tenta copiar um texto confidencial do Copilot e colar no WhatsApp pessoal. O que acontece?",
+    "options": [
+      "A política de Proteção de Aplicativos (MAM) do Intune bloqueia a cópia entre o app corporativo e o app pessoal.",
+      "O celular bloqueia a tela por biometria facial.",
+      "A conexão Bluetooth e o GPS são desativados.",
+      "O consumo de dados 5G é suspenso temporariamente."
+    ],
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Exatamente! O Intune MAM isola dados corporativos em um contêiner protegido no celular."
+  },
+  {
     "id": "slide_24",
     "type": "content",
     "title": "Slide 24",
     "subtitle": "",
     "text": "",
     "image": "slides_pdf_images/slide_24.png"
+  },
+  {
+    "id": "quiz_11",
+    "type": "quiz",
+    "title": "Pergunta 11: Remote Wipe (Limpeza Remota)",
+    "question": "Se um colaborador perder o celular corporativo com acesso ao Copilot, qual recurso do Intune é acionado?",
+    "options": [
+      "Selective Wipe / Remote Wipe, apagando remotamente apenas os dados e apps corporativos sem afetar fotos pessoais.",
+      "Envio de um sinal de som que toca o hino da empresa no celular.",
+      "Bloqueio da linha telefônica junto à operadora móvel.",
+      "Formatação física do cartão SIM de telefone."
+    ],
+    "correct": 0,
+    "points": 1000,
+    "explanation": "Excelente! O Intune Selective Wipe apaga os dados da empresa instantaneamente!"
   },
   {
     "id": "slide_25",
@@ -129,20 +270,19 @@
     "image": "slides_pdf_images/slide_25.png"
   },
   {
-    "id": "quiz_1",
+    "id": "quiz_12",
     "type": "quiz",
-    "title": "Pergunta 1: Fundamento de Segurança",
-    "question": "Qual o primeiro passo indispensável antes de distribuir licenças do Copilot para a empresa?",
+    "title": "Pergunta 12: Treinamento de LLM Privado",
+    "question": "Os dados e prompts enviados ao Microsoft 365 Copilot são usados para treinar os modelos abertos da OpenAI?",
     "options": [
-      "Sanear permissões legadas e estruturar a governança de dados no Purview e SharePoint.",
-      "Confiar exclusivamente que a engenharia de prompt do usuário irá impedir o vazamento.",
-      "Habilitar o Copilot apenas para a equipe de TI e bloquear o acesso aos diretores.",
-      "Assinar um termo de responsabilidade com cada usuário e liberar o ambiente sem travas."
+      "NÃO. A Microsoft garante que prompts e dados do Microsoft Graph jamais são usados para treinar modelos públicos.",
+      "SIM. Todos os dados enviados viram conhecimento público na web.",
+      "SIM, mas apenas se o documento for escrito em inglês.",
+      "DEPENDES da quantidade de caracteres do prompt do usuário."
     ],
     "correct": 0,
-    "image": "slides_pdf_images/slide_26.png",
-    "explanation": "Exato! Para garantir a segurança do Copilot, o primeiro passo indispensável é sanear as permissões e classificar os dados corporativos (Purview & SharePoint) para evitar oversharing!",
-    "points": 1000
+    "points": 1000,
+    "explanation": "Com certeza! O Microsoft 365 Copilot mantém isolamento total dos dados na nuvem da empresa."
   },
   {
     "id": "slide_fase1",
@@ -153,20 +293,19 @@
     "image": "slides_pdf_images/slide_27.png"
   },
   {
-    "id": "quiz_purview",
+    "id": "quiz_13",
     "type": "quiz",
-    "title": "Desafio 1: Microsoft Purview (DLP)",
-    "question": "Um funcionário tenta copiar dados de cartões de crédito e salários de uma planilha e colar no ChatGPT público ou enviar por e-mail externo. Qual mecanismo impede a exposição?",
+    "title": "Pergunta 13: Licenciamento Copilot Chat vs M365",
+    "question": "Qual a diferença fundamental entre o Copilot Chat gratuito e o Microsoft 365 Copilot pago?",
     "options": [
-      "O Microsoft Purview Data Loss Prevention (DLP), que detecta a sensibilidade e bloqueia a exfiltração em tempo real.",
-      "O Microsoft Defender Antivírus local instalado na máquina do usuário.",
-      "A auditoria manual semanal realizada pela equipe de compliance da empresa.",
-      "O bloqueio genérico de downloads do navegador corporativo."
+      "O M365 Copilot possui integração total com o Microsoft Graph (e-mails, SharePoint, Teams) e funciona nos apps.",
+      "O Copilot Chat gratuito não funciona em computadores Windows.",
+      "O M365 Copilot exige que o usuário digite em código binário.",
+      "Não existe nenhuma diferença técnica entre os dois."
     ],
     "correct": 0,
-    "image": "slides_pdf_images/slide_28.png",
-    "explanation": "Correto! O Microsoft Purview DLP identifica automaticamente dados sensíveis (PII, cartões, salários) e aplica bloqueio e criptografia instantâneos!",
-    "points": 1000
+    "points": 1000,
+    "explanation": "Exato! O M365 Copilot conecta a IA diretamente aos arquivos e conversas internas do seu ambiente!"
   },
   {
     "id": "slide_fase2",
@@ -177,20 +316,19 @@
     "image": "slides_pdf_images/slide_29.png"
   },
   {
-    "id": "quiz_sharepoint",
+    "id": "quiz_14",
     "type": "quiz",
-    "title": "Desafio 2: SharePoint & Oversharing",
-    "question": "Um site antigo do SharePoint continha relatórios financeiros acessíveis para 'Todos da Organização'. Como evitar que o Copilot indexe esses dados para usuários não autorizados?",
+    "title": "Pergunta 14: Shadow AI e Riscos Regulatórios",
+    "question": "Por que o uso de ferramentas não aprovadas de IA (Shadow AI) gera passivos regulatórios graves de LGPD?",
     "options": [
-      "Aplicar Restrição de Acesso ao Site (Site Access Restriction) e governança de Oversharing via SharePoint SAM.",
-      "Desativar o serviço de indexação de busca local do Windows 11.",
-      "Excluir o histórico de conversas e prompts do Copilot ao final de cada expediente.",
-      "Mudar a extensão dos arquivos confidenciais de .xlsx para formato .csv."
+      "Porque dados pessoais e segredos comerciais são enviados a servidores externos sem controle de retenção ou sigilo.",
+      "Porque reduz o armazenamento disponível no disco C do computador.",
+      "Porque impede que o Windows receba atualizações de segurança.",
+      "Porque altera automaticamente o idioma do sistema para espanhol."
     ],
     "correct": 0,
-    "image": "slides_pdf_images/slide_30.png",
-    "explanation": "Excelente! O SharePoint Advanced Management (SAM) permite restringir o escopo de acesso e corrigir oversharing em massa!",
-    "points": 1000
+    "points": 1000,
+    "explanation": "Correto! O Shadow AI expõe dados sensíveis a termos de uso públicos que não atendem às exigências da LGPD."
   },
   {
     "id": "slide_fase3",
@@ -201,20 +339,20 @@
     "image": "slides_pdf_images/slide_31.png"
   },
   {
-    "id": "quiz_entra",
+    "id": "quiz_final",
     "type": "quiz",
-    "title": "Desafio 3: Microsoft Entra ID",
-    "question": "Um atacante tenta utilizar um par de credenciais vazadas na Dark Web para logar no Copilot corporativo a partir de uma localização anômala. O que barra o acesso?",
+    "isSandbox": true,
+    "title": "Desafio Final: A Estratégia Perfeita de IA",
+    "question": "Para implementar o Copilot para 1.000 usuários com 100% de conformidade técnica e segurança, qual é a ordem estratégica correta?",
     "options": [
-      "Políticas de Acesso Condicional (Conditional Access) do Entra ID combinadas com verificação de Risco de Login e MFA.",
-      "O filtro de SPAM e Phishing do Microsoft Exchange Online.",
-      "A alteração preventiva da senha de rede Wi-Fi da empresa.",
-      "A criptografia de disco BitLocker instalada no notebook corporativo."
+      "1º Purview (rotulagem) ➔ 2º SharePoint SAM (trancar links) ➔ 3º Entra ID (MFA) ➔ 4º Intune (proteger celulares).",
+      "1º Liberar licenças ➔ 2º Aguardar relatórios de uso ➔ 3º Criar regras no Purview após incidentes.",
+      "1º Instalar antivírus ➔ 2º Bloquear celulares ➔ 3º Treinar gestores ➔ 4º Liberar sem restrições.",
+      "1º Comprar licenças E5 ➔ 2º Trancar todo o SharePoint ➔ 3º Exigir aprovação manual da TI para cada prompt."
     ],
     "correct": 0,
-    "image": "slides_pdf_images/slide_32.png",
-    "explanation": "Perfeito! O Microsoft Entra ID analisa o risco da tentativa de login (IP, dispositivo, localização) e bloqueia o acesso suspeito imediatamente!",
-    "points": 1000
+    "points": 1500,
+    "explanation": "Sensacional! Você dominou o Framework Oficial de Governança e Segurança em IA da Microsoft! 🏆🚀"
   },
   {
     "id": "slide_fase4",
@@ -223,55 +361,5 @@
     "subtitle": "Gerenciamento de Dispositivos e Proteção de Aplicativos (MAM)",
     "text": "Como impedir o vazamento de dados em celulares corporativos e pessoais (BYOD).",
     "image": "slides_pdf_images/slide_33.png"
-  },
-  {
-    "id": "quiz_intune",
-    "type": "quiz",
-    "isSandbox": true,
-    "title": "Desafio 4: Microsoft Intune (MAM)",
-    "question": "Em um dispositivo móvel pessoal (BYOD), um colaborador tenta copiar um resumo confidencial gerado pelo Copilot e colar num aplicativo pessoal. Qual tecnologia impede essa ação?",
-    "options": [
-      "Políticas de Proteção de Aplicativos (MAM) do Microsoft Intune com isolamento de contêiner e bloqueio de recortar/copiar/colar.",
-      "O bloqueio da tela do smartphone por biometria ou reconhecimento facial.",
-      "A desativação das conexões de Bluetooth e localização GPS do dispositivo.",
-      "A limitação do consumo de dados móveis 5G no sistema operacional."
-    ],
-    "correct": 0,
-    "image": "slides_pdf_images/slide_34.png",
-    "explanation": "Exatamente! O Intune MAM isola os dados corporativos em um contêiner protegido e impede a transferência (copiar/colar) para apps não autorizados!",
-    "points": 1000
-  },
-  {
-    "id": "slide_fase5",
-    "type": "content",
-    "title": "Fase Final: O Desafio dos Campeões de Governança",
-    "subtitle": "Combinando todas as ferramentas da Microsoft",
-    "text": "Como unir Purview, SharePoint SAM, Entra ID e Intune para criar a estratégia perfeita de IA Corporativa.",
-    "image": "slides_pdf_images/slide_35.png"
-  },
-  {
-    "id": "quiz_final",
-    "type": "quiz",
-    "isSandbox": true,
-    "title": "Desafio Final: A Estratégia Perfeita de IA",
-    "question": "Para implementar o Copilot para 1.000 usuários com 100% de conformidade técnica e segurança, qual é a ordem estratégica recomendada pela Microsoft?",
-    "options": [
-      "1º Rotulagem de Sensibilidade (Purview) ➔ 2º Correção de Oversharing (SharePoint SAM) ➔ 3º Acesso Condicional (Entra ID) ➔ 4º Proteção de Aplicativos (Intune MAM).",
-      "1º Liberar licenças do Copilot ➔ 2º Aguardar relatórios de uso ➔ 3º Criar regras de bloqueio no Purview após incidentes.",
-      "1º Instalar antivírus ➔ 2º Bloquear acessos de celulares ➔ 3º Treinar os gestores ➔ 4º Liberar a IA sem restrições no SharePoint.",
-      "1º Comprar licenças E5 ➔ 2º Trancar todo o SharePoint ➔ 3º Exigir aprovação manual da TI para cada prompt do usuário."
-    ],
-    "correct": 0,
-    "image": "slides_pdf_images/slide_36.png",
-    "explanation": "Sensacional! Você dominou o Framework Oficial de Governança e Segurança em IA da Microsoft! 🏆🚀",
-    "points": 1500
-  },
-  {
-    "id": "slide_podcast",
-    "type": "content",
-    "title": "🏆 Pódio Final e Encerramento",
-    "subtitle": "Parabéns aos Campeões da Governança de IA!",
-    "text": "Veja no telão e nos celulares quem ficou no topo do Ranking da Sala!",
-    "image": "slides_pdf_images/slide_37.png"
   }
 ]
