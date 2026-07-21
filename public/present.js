@@ -1,3 +1,46 @@
+// ==========================================
+// PASSWORD LOCK — PRESENTER SCREEN
+// ==========================================
+(function() {
+  const overlay = document.getElementById('present-pass-overlay');
+  const input   = document.getElementById('present-pass-input');
+  const btn     = document.getElementById('present-pass-btn');
+  const errEl   = document.getElementById('present-pass-error');
+
+  const VALID = ['bizapp', 'bizapp2026', '1234'];
+
+  function checkAuth() {
+    if (sessionStorage.getItem('presenter_authed') === 'true') {
+      if (overlay) overlay.style.display = 'none';
+    } else {
+      if (overlay) overlay.style.display = 'flex';
+    }
+  }
+
+  function submitPassword() {
+    const val = input ? input.value.trim() : '';
+    if (VALID.includes(val)) {
+      sessionStorage.setItem('presenter_authed', 'true');
+      if (overlay) {
+        overlay.style.opacity = '0';
+        overlay.style.transition = 'opacity 0.4s ease';
+        setTimeout(() => { overlay.style.display = 'none'; }, 400);
+      }
+    } else {
+      if (errEl) errEl.style.display = 'block';
+      if (input) {
+        input.style.borderColor = '#f87171';
+        input.value = '';
+        setTimeout(() => { input.style.borderColor = 'rgba(255,255,255,0.15)'; }, 1500);
+      }
+    }
+  }
+
+  if (btn) btn.addEventListener('click', submitPassword);
+  if (input) input.addEventListener('keyup', (e) => { if (e.key === 'Enter') submitPassword(); });
+  checkAuth();
+})();
+
 const socket = io();
 
 // UI Screens

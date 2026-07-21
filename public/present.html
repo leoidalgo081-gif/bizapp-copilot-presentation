@@ -305,6 +305,88 @@
   <canvas id="confetti-canvas"></canvas>
 
   <!-- Telão Header -->
+  <!-- PASSWORD LOCK OVERLAY -->
+  <div id="present-pass-overlay" style="
+    position: fixed; inset: 0; z-index: 9999;
+    background: linear-gradient(135deg, #0a0a1a 0%, #1e1b4b 60%, #0a0a1a 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 24px;
+  ">
+    <!-- Logo -->
+    <img src="logos/logotipo-branco.png" alt="Bizapp" style="height: 52px; margin-bottom: 8px; object-fit: contain;" onerror="this.style.display='none'">
+
+    <!-- Card -->
+    <div style="
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 40px 48px;
+      width: 380px;
+      display: flex; flex-direction: column; align-items: center; gap: 20px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+    ">
+      <!-- Icon -->
+      <div style="width:56px; height:56px; border-radius:16px; background:linear-gradient(135deg,#7e22ce,#0078d4); display:flex; align-items:center; justify-content:center; font-size:1.8rem;">🔒</div>
+
+      <div style="text-align:center;">
+        <h2 style="font-size:1.5rem; font-weight:900; color:#ffffff; margin:0 0 6px 0;">Acesso Restrito</h2>
+        <p style="font-size:0.88rem; color:#94a3b8; margin:0;">Insira a senha de apresentador para continuar</p>
+      </div>
+
+      <!-- Input -->
+      <input
+        id="present-pass-input"
+        type="password"
+        placeholder="Digite a senha..."
+        autocomplete="off"
+        style="
+          width: 100%; box-sizing: border-box;
+          background: rgba(255,255,255,0.06);
+          border: 1.5px solid rgba(255,255,255,0.15);
+          border-radius: 12px;
+          padding: 14px 18px;
+          font-size: 1rem;
+          color: #ffffff;
+          outline: none;
+          transition: border-color 0.2s;
+          font-family: inherit;
+        "
+        onfocus="this.style.borderColor='#7e22ce'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.15)'"
+      >
+
+      <!-- Error -->
+      <div id="present-pass-error" style="display:none; color:#f87171; font-size:0.82rem; font-weight:700; margin-top:-8px;">
+        ❌ Senha incorreta. Tente novamente.
+      </div>
+
+      <!-- Button -->
+      <button
+        id="present-pass-btn"
+        style="
+          width: 100%;
+          background: linear-gradient(135deg, #7e22ce, #0078d4);
+          border: none;
+          border-radius: 12px;
+          padding: 14px;
+          font-size: 1rem;
+          font-weight: 800;
+          color: #ffffff;
+          cursor: pointer;
+          transition: opacity 0.2s, transform 0.1s;
+          font-family: inherit;
+          letter-spacing: 0.5px;
+        "
+        onmouseover="this.style.opacity='0.88'"
+        onmouseout="this.style.opacity='1'"
+        onmousedown="this.style.transform='scale(0.97)'"
+        onmouseup="this.style.transform='scale(1)'"
+      >🎬 Entrar como Apresentador</button>
+    </div>
+
+    <p style="font-size:0.75rem; color:#334155;">Copilot Presentation — Acesso restrito ao apresentador</p>
+  </div>
+
   <header>
     <div class="logo-container" style="display: flex; align-items: center; gap: 12px;">
       <img src="logos/logotipo-branco.png" alt="Bizapp Logo" style="height: 38px; object-fit: contain;">
