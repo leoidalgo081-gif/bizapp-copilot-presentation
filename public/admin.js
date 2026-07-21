@@ -1,5 +1,40 @@
 const socket = io();
 
+// Password Protection Elements
+const passOverlay = document.getElementById('admin-pass-overlay');
+const passInput = document.getElementById('admin-pass-input');
+const passBtn = document.getElementById('btn-pass-submit');
+const passError = document.getElementById('pass-error');
+
+function checkAdminAuth() {
+  if (sessionStorage.getItem('admin_authed') === 'true') {
+    if (passOverlay) passOverlay.style.display = 'none';
+  } else {
+    if (passOverlay) passOverlay.style.display = 'flex';
+  }
+}
+
+function submitAdminPassword() {
+  const val = passInput ? passInput.value.trim() : '';
+  if (val === 'bizapp' || val === 'bizapp2026' || val === '1234') {
+    sessionStorage.setItem('admin_authed', 'true');
+    if (passOverlay) passOverlay.style.display = 'none';
+  } else {
+    if (passError) {
+      passError.textContent = 'Senha incorreta! Tente novamente.';
+      passError.style.display = 'block';
+    }
+  }
+}
+
+if (passBtn) passBtn.addEventListener('click', submitAdminPassword);
+if (passInput) {
+  passInput.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') submitAdminPassword();
+  });
+}
+checkAdminAuth();
+
 // UI Elements
 const itemCountEl = document.getElementById('player-count');
 const statusBadgeEl = document.getElementById('status-badge');
