@@ -180,46 +180,56 @@ function showScreenForState(data, slide) {
     setupPresentAction('Iniciar Apresentação', 'admin_start');
   } else if (data.status === 'content') {
     if (slide) {
-      if (data.currentSlideIndex === 0) {
+      // Quiz slides in "content" state: show question in standby (not yet released)
+      if (slide.type === 'quiz') {
+        quizQuestionText.textContent = slide.question;
+        renderQuizOptions(slide.options, slide.correct, false);
+        if (slide.image) {
+          quizSlideContextImg.src = slide.image;
+          quizSlideContextImg.style.display = 'block';
+        } else {
+          quizSlideContextImg.style.display = 'none';
+        }
+        quizStatsChartBox.style.display = 'none';
+        quizExplanationBox.style.display = 'none';
+        quizStatusBadge.textContent = '🔒 AGUARDANDO LIBERAÇÃO';
+        quizStatusBadge.style.color = '#94a3b8';
+        timerMetaBox.style.display = 'none';
+        quizAnsweredCount.textContent = '—';
+        clearAnsweredBubbles();
+        showScreen(screenQuiz);
+        setupPresentAction('Liberar Pergunta', 'admin_release_quiz');
+      } else if (data.currentSlideIndex === 0) {
         showScreen(document.getElementById('screen-custom-cover'));
+        setupPresentAction('Próximo Slide', 'admin_change_slide_next');
       } else if (slide.id === 'slide_10') {
         showScreen(document.getElementById('screen-custom-slide10'));
         triggerSlide10Animation(false);
+        setupPresentAction('Próximo Slide', 'admin_change_slide_next');
       } else if (slide.id === 'slide_13') {
         showScreen(document.getElementById('screen-custom-slide13'));
+        setupPresentAction('Próximo Slide', 'admin_change_slide_next');
       } else if (slide.id === 'slide_14') {
         showScreen(document.getElementById('screen-custom-slide14'));
-      } else if (slide.id === 'quiz_sharepoint' || slide.id === 'slide_fase2') {
-        showScreen(document.getElementById('screen-custom-slide21'));
-      } else if (slide.id === 'slide_fase3') {
-        showScreen(document.getElementById('screen-custom-slide22'));
-      } else if (slide.id === 'quiz_entra') {
-        showScreen(document.getElementById('screen-custom-slide23'));
-      } else if (slide.id === 'quiz_intune' || slide.id === 'slide_fase4') {
-        showScreen(document.getElementById('screen-custom-slide25'));
-      } else if (slide.id === 'quiz_final' || slide.id === 'slide_fase5') {
-        showScreen(document.getElementById('screen-custom-slide27'));
-      } else if (slide.id === 'slide_podcast') {
-        showScreen(document.getElementById('screen-custom-slide28'));
+        setupPresentAction('Próximo Slide', 'admin_change_slide_next');
       } else if (slide.id === 'slide_16') {
         showScreen(document.getElementById('screen-custom-slide16'));
         triggerSlide16Animation();
+        setupPresentAction('Próximo Slide', 'admin_change_slide_next');
       } else if (slide.id === 'slide_17') {
         showScreen(document.getElementById('screen-custom-slide17'));
         triggerSlide17Animation();
+        setupPresentAction('Próximo Slide', 'admin_change_slide_next');
       } else {
+        // Regular content slide with image
         showScreen(screenContent);
+        if (slide.image && presentSlideImg) {
+          presentSlideImg.src = slide.image;
+          presentSlideImg.style.display = 'block';
+        }
         if (typeof Reveal !== 'undefined' && revealInitialized) {
           Reveal.slide(data.currentSlideIndex);
         }
-      }
-      
-      // Configure actions
-      if (slide.type === 'quiz') {
-        setupPresentAction('Liberar Pergunta', 'admin_release_quiz');
-      } else if (slide.type === 'minigame') {
-        setupPresentAction('Iniciar Jogo', 'admin_start_minigame');
-      } else {
         setupPresentAction('Próximo Slide', 'admin_change_slide_next');
       }
     }
