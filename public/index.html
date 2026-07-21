@@ -634,19 +634,14 @@
         <li class="menu-item"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Agentes</li>
       </ul>
 
-      <div class="section-title">Fixado</div>
-      <ul class="menu-list">
-        <li class="menu-item" id="sidebar-ranking-btn" style="color: #2899f5; font-weight: 600;"><span style="color:#fbbf24; font-size:1.1rem; line-height:0; margin-right:4px;">🏆</span> Ranking da Sala</li>
-        <li class="menu-item"><span style="color:#0078d4; font-size:1.2rem; line-height:0; margin-right:4px;">•</span> Pesquisador</li>
-        <li class="menu-item"><span style="color:#d13438; font-size:1.2rem; line-height:0; margin-right:4px;">•</span> Analista</li>
-      </ul>
-
-      <div class="section-title">Chats</div>
-      <div class="chat-history-item">Time Sheet e E-mails de 10 Jul</div>
-      <div class="chat-history-item">Aplicativo para Missão Belém...</div>
-      <div class="chat-history-item">Notícias sobre vazamento e go...</div>
-      <div class="chat-history-item">Convite para Treinamento Esp...</div>
-      <div class="chat-history-item">Configuração Complexa do Pu...</div>
+      <div class="section-title" style="display: flex; align-items: center; justify-content: space-between; margin-top: 16px;">
+        <span style="color: #38bdf8; font-weight: 800;">🏆 RANKING DA SALA</span>
+        <span id="sidebar-player-count-badge" style="background: rgba(0, 120, 212, 0.2); color: #38bdf8; padding: 2px 8px; border-radius: 10px; font-size: 0.72rem; font-weight: 700;">0 JOGADORES</span>
+      </div>
+      
+      <div id="sidebar-leaderboard-list" style="display: flex; flex-direction: column; gap: 6px; margin-top: 10px; max-height: 320px; overflow-y: auto; padding-right: 4px;">
+        <div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic; padding: 6px 8px;">Aguardando participantes...</div>
+      </div>
     </div>
 
     <div class="profile-section">

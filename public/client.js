@@ -527,7 +527,43 @@ rankingModal.addEventListener('click', (e) => {
   if (e.target === rankingModal) rankingModal.style.display = 'none';
 });
 
+function updateSidebarLeaderboard(leaderboard) {
+  const container = document.getElementById('sidebar-leaderboard-list');
+  const countBadge = document.getElementById('sidebar-player-count-badge');
+  if (!container) return;
+
+  if (countBadge) countBadge.textContent = `${leaderboard.length} JOGADORES`;
+
+  if (!leaderboard || leaderboard.length === 0) {
+    container.innerHTML = `<div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic; padding: 6px 8px;">Nenhum participante conectado.</div>`;
+    return;
+  }
+
+  let html = '';
+  leaderboard.forEach((player, idx) => {
+    const isMe = (player.name === myName);
+    const medal = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `#${idx + 1}`;
+    const bgStyle = isMe 
+      ? 'background: linear-gradient(135deg, rgba(0, 120, 212, 0.3), rgba(126, 34, 206, 0.3)); border: 1.5px solid #0078d4;' 
+      : 'background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);';
+    
+    html += `
+      <div style="${bgStyle} border-radius: 10px; padding: 8px 10px; display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; color: #fff;">
+        <div style="display: flex; align-items: center; gap: 8px; overflow: hidden;">
+          <span style="font-weight: 800; min-width: 22px; color: ${idx < 3 ? '#fbbf24' : '#a19f9d'}; font-size: 0.85rem;">${medal}</span>
+          <span style="font-size: 1rem;">${player.avatar || '👨‍💻'}</span>
+          <span style="font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100px; color: ${isMe ? '#38bdf8' : '#e2e8f0'};">${player.name}</span>
+        </div>
+        <span style="font-weight: 800; color: #38bdf8; font-size: 0.78rem; background: rgba(56, 189, 248, 0.12); padding: 3px 6px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.3);">${player.score || 0} pts</span>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
 function updateModalRanking(leaderboard) {
+  updateSidebarLeaderboard(leaderboard);
   modalRankingList.innerHTML = '';
   const medals = ['🥇', '🥈', '🥉'];
 
