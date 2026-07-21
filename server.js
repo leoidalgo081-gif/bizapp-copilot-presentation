@@ -249,6 +249,14 @@ io.on('connection', (socket) => {
       answeredCount: state.answeredCount,
       answersCount: state.answersCount
     });
+
+    // Notify presenter: someone answered (no spoiler — just name & avatar)
+    io.emit('player_answered_notify', {
+      name: player.name,
+      avatar: player.avatar || '👨‍💻',
+      answeredCount: state.answeredCount,
+      totalPlayers: Object.values(state.players).filter(p => p.active).length
+    });
   });
 
   // Minigame score submission

@@ -250,6 +250,7 @@ function showScreenForState(data, slide) {
       timerMetaBox.style.display = 'flex';
       quizAnsweredCount.textContent = data.answeredCount || 0;
       
+      clearAnsweredBubbles();
       showScreen(screenQuiz);
       setupPresentAction('Revelar Resposta', 'admin_reveal_answer');
     }
@@ -356,6 +357,57 @@ socket.on('answer_progress', (data) => {
     }
   });
 });
+
+// Live answered bubble notification
+socket.on('player_answered_notify', (data) => {
+  const strip = document.getElementById('quiz-answered-bubbles-strip');
+  if (!strip) return;
+
+  // Create bubble
+  const bubble = document.createElement('div');
+  bubble.style.cssText = `
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(0, 120, 212, 0.25));
+    border: 1px solid rgba(99, 102, 241, 0.5);
+    border-radius: 30px;
+    padding: 4px 10px 4px 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    opacity: 0;
+    transform: scale(0.6) translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    white-space: nowrap;
+  `;
+  bubble.innerHTML = `<span style="font-size:1rem;">${data.avatar}</span><span>${data.name}</span><span style="color:#a5b4fc; font-size:0.65rem;">✓</span>`;
+  strip.appendChild(bubble);
+
+  // Animate in
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      bubble.style.opacity = '1';
+      bubble.style.transform = 'scale(1) translateY(0)';
+    });
+  });
+
+  // Update answered count display
+  if (quizAnsweredCount) {
+    quizAnsweredCount.textContent = data.answeredCount;
+  }
+});
+
+// Clear bubbles strip when quiz is reset (new slide)
+function clearAnsweredBubbles() {
+  const strip = document.getElementById('quiz-answered-bubbles-strip');
+  if (!strip) return;
+  // Remove all children except the label span
+  const children = Array.from(strip.children);
+  children.forEach((child, idx) => {
+    if (idx > 0) strip.removeChild(child);
+  });
+}
 
 // Timer sync
 socket.on('timer_update', (data) => {
