@@ -1,0 +1,9 @@
+node_modules/
+.system_generated/
+*.log
+scratch/
+NOVO.pptx
+Template Apresentação com Copilot - Bizapp 2026.pptx
+Treinamento 2.pptx
+extracted_images/
+public/copilot_icons/

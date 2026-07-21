@@ -1,0 +1,458 @@
+{
+    "NOVO.pptx": [
+        {
+            "slide_number": 2,
+            "title": "",
+            "text": "Se uma empresa perguntasse hoje qual licença do Copilot implementar, você saberia exatamente como responder?",
+            "images": [
+                "extracted_images/NOVO/slide_2_img_11.png"
+            ]
+        },
+        {
+            "slide_number": 3,
+            "title": "",
+            "text": "Entender todos os tipos de licença Copilot Chat e Copilot Studio\nOrientação sobre qual licença Copilot implementar para cada cenário e tipo de usuário\nObjetivo do Treinamento\nCapacitar você a recomendar e aplicar a licença Copilot ideal com segurança, técnica e justificativa de negócio\nComo realizar deploys e controle de Copilot 365 Chat e Copilot Studio e implementar no ambiente",
+            "images": [
+                "extracted_images/NOVO/slide_3_img_12.png",
+                "extracted_images/NOVO/slide_3_img_13.png",
+                "extracted_images/NOVO/slide_3_img_14.png"
+            ]
+        },
+        {
+            "slide_number": 9,
+            "title": "",
+            "text": "Estudo de Caso - RUNAWAY\nPara salvar a Andy Sachs e permitir que ela:\u000bGerencie o Outlook com respostas inteligentes\u000b\u000bCrie rascunhos no Word\u000b\u000bResuma reuniões no Teams E trabalhe com contexto real dos dados da Runway...tudo ao mesmo tempo, qual é a solução ideal?\u000b\u000b\u000bA) Copilot Chat \u000b\u000bB) Copilot 365 para Usuários (Microsoft 365)\u000b\u000bC) Copilot Studio Pré‑pago\u000b\u000bD) Copilot Studio para usuário\nCOPISTILO",
+            "images": [
+                "extracted_images/NOVO/slide_9_img_24.jpg",
+                "extracted_images/NOVO/slide_9_img_25.jpg"
+            ]
+        },
+        {
+            "slide_number": 11,
+            "title": "",
+            "text": "Como Habilitar o Copilot 365 por uso?\nCriar uma assinatura Azure\nCriar um grupo de recursos no Azure\nIr no cobrança e Uso do Copilot\nAtivar e aplicar\n1\n2\n3\n4\nPágina inicial - Microsoft Azure",
+            "images": [
+                "extracted_images/NOVO/slide_11_img_28.png",
+                "extracted_images/NOVO/slide_11_img_29.png",
+                "extracted_images/NOVO/slide_11_img_30.png"
+            ]
+        },
+        {
+            "slide_number": 12,
+            "title": "",
+            "text": "Como Habilitar o Copilot Chat por uso?\nCobrança e uso - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/NOVO/slide_12_img_31.png",
+                "extracted_images/NOVO/slide_12_img_32.png",
+                "extracted_images/NOVO/slide_12_img_33.png"
+            ]
+        },
+        {
+            "slide_number": 15,
+            "title": "",
+            "text": "Estudo de Caso – OS INCRIVEIS\nImagine a rotina do Sr. Incrível: Ele passa 29 dias do mês esmagando robôs gigantes, frustrando vilões e salvando Metroville. O único momento em que ele se senta na frente de um computador é no \"Dia do Relatório Anual da Agência do Governo\" — aquele dia tenso em que precisa:\u000b\u000bEscrever relatórios burocráticos gigantes;\u000bUsar alguns agentes específicos para coletar informações;\u000bJustificar despesas da família para manter a pensão oficial de super-herói.\u000b\u000bQual a melhor forma de contratar o Copilot para o Sr. Incrível fazer esse relatório mensal sem estourar o orçamento?\u000b\u000bA) Comprar uma Licença Fixa Anual do Copilot M365 ($360/ano)\u000b\u000bB) Contratar uma estagiária\u000b\u000bC) Habilitar o \"M365 Copilot Chat via Consumo\" (Pay-as-you-go)\u000b\u000bD) Usar o Copilot Studio pré pago\nCOPINCRIVEL",
+            "images": [
+                "extracted_images/NOVO/slide_15_img_37.gif",
+                "extracted_images/NOVO/slide_15_img_38.jpg"
+            ]
+        },
+        {
+            "slide_number": 18,
+            "title": "",
+            "text": "Dois tipos de licenças\nComo habilitar o Copilot Studio Pré Pago\nServiços de Compra do Marketplace - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/NOVO/slide_18_img_43.jpg",
+                "extracted_images/NOVO/slide_18_img_44.png",
+                "extracted_images/NOVO/slide_18_img_45.png",
+                "extracted_images/NOVO/slide_18_img_46.png"
+            ]
+        },
+        {
+            "slide_number": 20,
+            "title": "",
+            "text": "Estudo de Caso – MontrosSA\nPara atender a esse processo industrial constante e previsível de 25.000 interações mensais, a Roz quer fechar um contrato anual com preço travado, sem risco da fatura vir mais alta no mês que vem. Qual a contratação segura?\nA Monstros S.A. processa sustos (e agora risadas) em escala industrial. A Roz, que cuida do financeiro e da burocracia, sabe que a fábrica opera com exatamente 25.000 portas de crianças por mês. É uma meta fixa. Ela odeia contas variáveis. Ela precisa aprovar o orçamento anual hoje e não pode ter surpresas no cartão de crédito da empresa se o Sulley trabalhar 5 minutos a mais\nA) Comprar 100.000 licenças de Copilot M365 \u000b\u000bB) Contratar 5.000 elfos domésticos \u000b\u000bC) Copilot Studio via Azure (Pago Conforme o Uso) \u000b\u000bD) Copilot Pro – Pedir para cada bruxo usar sua conta pessoal\nA) Copilot Studio via Azure (Pago Conforme o Uso) \u000b\u000b\u000bB) Copilot para M365 \u000b\u000b\u000bC) Copilot Studio: Pacote de Capacidade (25.000 mensagens/mês Pré-pago)\u000b\u000b\u000bD) Contratar o Mike Wazowski – Ele esquece a papelada.",
+            "images": [
+                "extracted_images/NOVO/slide_20_img_49.png",
+                "extracted_images/NOVO/slide_20_img_50.jpg",
+                "extracted_images/NOVO/slide_20_img_51.jpg"
+            ]
+        },
+        {
+            "slide_number": 22,
+            "title": "",
+            "text": "Dois tipos de licenças\nComo habilitar Copilot Studio Por Uso\nPágina Inicial - Power Platform admin center",
+            "images": [
+                "extracted_images/NOVO/slide_22_img_54.jpg",
+                "extracted_images/NOVO/slide_22_img_55.png"
+            ]
+        },
+        {
+            "slide_number": 23,
+            "title": "",
+            "text": "Estudo de Caso – COPA QUADRIBOL\nO Ministério da Magia está organizando a Copa Mundial de Quadribol. Eles têm 200 funcionários internos (como o Arthur Weasley) trabalhando dia e noite. Mas, de repente, 100.000 bruxos do mundo todo chegam ao acampamento por apenas 1 semana. Todos esses 100 mil turistas querem usar um 'Chatbot Mágico' para perguntar: 'Onde é minha barraca?', 'Onde compro cerveja amanteigada?' e 'Qual o placar?'\nO Ministro da Magia precisa desse chatbot para atender os 100.000 torcedores apenas durante a semana da Copa. Qual a forma inteligente de pagar por essa IA?\nA) Comprar 100.000 licenças de Copilot M365 \u000b\u000bB) Contratar 5.000 elfos domésticos \u000b\u000bC) Copilot Studio via Azure (Pago Conforme o Uso) \u000b\u000bD) Copilot Studio Pré pago\nCOPOTTER",
+            "images": [
+                "extracted_images/NOVO/slide_23_img_56.png",
+                "extracted_images/NOVO/slide_23_img_57.jpg",
+                "extracted_images/NOVO/slide_23_img_58.jpg"
+            ]
+        },
+        {
+            "slide_number": 24,
+            "title": "",
+            "text": "Estudo de Caso – COPA QUADRIBOL\nO Ministério da Magia está organizando a Copa Mundial de Quadribol. Eles têm 200 funcionários internos (como o Arthur Weasley) trabalhando dia e noite. Mas, de repente, 100.000 bruxos do mundo todo chegam ao acampamento por apenas 1 semana. Todos esses 100 mil turistas querem usar um 'Chatbot Mágico' para perguntar: 'Onde é minha barraca?', 'Onde compro cerveja amanteigada?' e 'Qual o placar?'\nO Ministro da Magia precisa desse chatbot para atender os 100.000 torcedores apenas durante a semana da Copa. Qual a forma inteligente de pagar por essa IA?\nA) Comprar 100.000 licenças de Copilot M365 \u000b\u000bB) Contratar 5.000 elfos domésticos \u000b\u000bC) Copilot Studio via Azure (Pago Conforme o Uso) \u000b\u000bD) Copilot Studio Pré pago\nCOPOTTER",
+            "images": [
+                "extracted_images/NOVO/slide_24_img_59.png",
+                "extracted_images/NOVO/slide_24_img_60.jpg",
+                "extracted_images/NOVO/slide_24_img_61.jpg"
+            ]
+        },
+        {
+            "slide_number": 27,
+            "title": "",
+            "text": "Como Fazer Deploy de um Agente?\nCanais - Agente 1 | Microsoft Copilot Studio",
+            "images": [
+                "extracted_images/NOVO/slide_27_img_66.png",
+                "extracted_images/NOVO/slide_27_img_67.png",
+                "extracted_images/NOVO/slide_27_img_68.png"
+            ]
+        }
+    ],
+    "Template Apresentação com Copilot - Bizapp 2026.pptx": [
+        {
+            "slide_number": 11,
+            "title": "",
+            "text": "Se uma inteligência artificial pudesse acessar qualquer dado da empresa, você saberia exatamente quais riscos isso traria?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_11_img_24.png"
+            ]
+        },
+        {
+            "slide_number": 19,
+            "title": "",
+            "text": "O que é Copilot Chat vs Microsoft 365 Copilot?\nCopilot Chat\nIA básica para toda a organização\nChat gratuito com GPT‑4o\nAgentes acessados via chat (pagos por consumo)\nControles de TI e proteção de dados corporativos\nMicrosoft 365 Copilot\nTudo do Copilot Chat + integração com dados do tenant\nFunciona dentro dos apps (Word, Excel, Outlook, Teams etc.)\nRecursos avançados: SharePoint Advanced Management, Copilot Analytics, Viva Insights\nLicença: US$ 30 por usuário/mês",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_19_img_74.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_19_img_75.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_19_img_76.png"
+            ]
+        },
+        {
+            "slide_number": 20,
+            "title": "",
+            "text": "Aonde estão meus dados?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_20_img_77.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_20_img_78.png"
+            ]
+        },
+        {
+            "slide_number": 25,
+            "title": "",
+            "text": "Pergunta 1\nQual a primeira coisa que precisamos fazer para dar segurança ao Copilot?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_25_img_103.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_25_img_104.png"
+            ]
+        },
+        {
+            "slide_number": 28,
+            "title": "",
+            "text": "Como proteger o seu ambiente?\u000b5 passos para manter seu ambiente Microsoft Seguro\nMicrosoft 365 admin Center\nEntra ID\nSharepoint\nMicrosoft Intune\nMicrosoft Purview\n1\n2\n3\n4\n5\nIdentificar licenças do Copilot.\nMonitorar grupos e funções de segurança.\nGerenciar identidades, aplicar políticas de acesso condicional e revisar funções\nAvaliar permissões de acesso no SharePoint.\nRefinar documentações e aplicar rótulos de sensibilidade via Purview.\nProteger dispositivos dos colaboradores que utilizam Copilot (políticas de conformidade, criptografia, proteção de apps).\nProteger dispositivos dos colaboradores que utilizam Copilot (políticas de conformidade, criptografia, proteção de apps).",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_28_img_110.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_28_img_111.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_28_img_112.png"
+            ]
+        },
+        {
+            "slide_number": 40,
+            "title": "",
+            "text": "5\nMicrosoft Sharepoint\nRestricted SharePoint Search\nEle serve para limitar o escopo da pesquisa do Copilot (e do Microsoft Search) dentro do SharePoint. Quando ativado, ele impede que o Copilot faça buscas em todos os sites aos quais o usuário tem acesso e restringe a pesquisa apenas a sites específicos definidos pelo administrador.\nPor que isso existe?\nMesmo que o Copilot respeite as permissões, em ambientes com muitos sites e dados sensíveis, pode ser interessante reduzir a superfície de busca para evitar que informações críticas apareçam em respostas.\nÉ uma camada extra de governança para organizações que querem controlar onde o Copilot pode buscar conteúdo.\nFiltragem de Sites",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_40_img_141.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_40_img_142.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_40_img_143.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_40_img_144.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_40_img_145.png"
+            ]
+        },
+        {
+            "slide_number": 43,
+            "title": "",
+            "text": "5\nMicrosoft Sharepoint\nRestricted SharePoint Search\nQuando utilizar?\nCenários com dados altamente sensíveis espalhados por vários sites.\nEmpresas que querem que o Copilot trabalhe apenas com conteúdo corporativo oficial (ex.: sites de projetos, políticas, treinamentos), evitando dados pessoais ou não estruturados.",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_43_img_151.png"
+            ]
+        },
+        {
+            "slide_number": 44,
+            "title": "",
+            "text": "5\nRestricted SharePoint Search\nComo faço para ativar?\nMicrosoft Sharepoint\nNecessário Função administrator do Sharepoint ou mais elevada",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_44_img_152.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_44_img_153.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_44_img_154.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_44_img_155.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_44_img_156.png"
+            ]
+        },
+        {
+            "slide_number": 45,
+            "title": "",
+            "text": "5\nPermitir que somente sites específicos não sejam encontrados dentro da Pesquisa\u000bComo faço para ativar?\nMicrosoft Sharepoint\nNecessário Função administrator do Sharepoint ou mais elevada",
+            "images": []
+        },
+        {
+            "slide_number": 46,
+            "title": "",
+            "text": "5\nPermitir que somente sites específicos não sejam encontrados dentro da Pesquisa\u000bComo faço para ativar?\nMicrosoft Sharepoint\nNecessário Função administrator do Sharepoint ou mais elevada",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_46_img_157.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_46_img_158.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_46_img_159.png"
+            ]
+        },
+        {
+            "slide_number": 47,
+            "title": "",
+            "text": "6\nComo proteger os Computadores para o Copilot\nMicrosoft Intune\nO que é o Intune?\nMicrosoft Intune é uma solução de gerenciamento de dispositivos e aplicativos baseada na nuvem",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_47_img_160.png"
+            ]
+        },
+        {
+            "slide_number": 49,
+            "title": "",
+            "text": "6\nAplicativos do 365 Dentro da Base de segurança\nMicrosoft Intune\nComo inserir?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_163.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_164.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_165.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_166.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_167.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_168.png"
+            ]
+        },
+        {
+            "slide_number": 50,
+            "title": "",
+            "text": "6\nAplicativos do 365 Dentro da Base de segurança\nMicrosoft Intune\nComo inserir?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_169.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_170.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_171.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_172.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_173.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_174.png"
+            ]
+        },
+        {
+            "slide_number": 51,
+            "title": "",
+            "text": "6\nMicrosoft Purview\nMicrosoft Intune\nO que é?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_51_img_175.png"
+            ]
+        },
+        {
+            "slide_number": 79,
+            "title": "",
+            "text": "O QUE NÓS IMAGINAMOS,\nA TECNOLOGIA REALIZA\n#PURPECIRCLE\nSoluções que modernizam e transformam as operações de negócios das empresas em busca de torná-las mais produtivas, competitivas e obterem diferencial no mercado de atuação.\nTecnologia, conhecimento e coletividade. ​Com um time que acredita nas tecnologias escolhidas, é apaixonado pelo que faz e tem vontade de trilhar os desafios junto com o cliente.\nO ser humano tem uma enorme\ncapacidade de reimaginar e a tecnologia é a ferramenta que habilita as novas possibilidades. Sempre teremos um novo objetivo e um novo desafio a explorar \u000be este é o combustível que nos mantém crescendo: a perspectiva de inovação.\nPor que?\nO que?\nComo?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_79_img_178.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_79_img_179.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_79_img_180.png"
+            ]
+        }
+    ],
+    "Treinamento 2.pptx": [
+        {
+            "slide_number": 10,
+            "title": "",
+            "text": "Você já refletiu sobre o que pode acontecer se não monitorarmos o uso da IA e do Copilot na empresa?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_10_img_28.png"
+            ]
+        },
+        {
+            "slide_number": 13,
+            "title": "",
+            "text": "Qual é o primeiro passo essencial para garantir segurança ao implementar o Copilot na empresa?\nForms",
+            "images": [
+                "extracted_images/Treinamento 2/slide_13_img_34.png",
+                "extracted_images/Treinamento 2/slide_13_img_35.png",
+                "extracted_images/Treinamento 2/slide_13_img_36.png"
+            ]
+        },
+        {
+            "slide_number": 16,
+            "title": "",
+            "text": "Como fixar o Copilot no Desktop\nConfigurações - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/Treinamento 2/slide_16_img_40.png",
+                "extracted_images/Treinamento 2/slide_16_img_41.png",
+                "extracted_images/Treinamento 2/slide_16_img_42.png",
+                "extracted_images/Treinamento 2/slide_16_img_43.png",
+                "extracted_images/Treinamento 2/slide_16_img_44.png"
+            ]
+        },
+        {
+            "slide_number": 17,
+            "title": "",
+            "text": "Add a name for your app setup policy - Microsoft Teams admin center\nComo fixar o Copilot no Teams",
+            "images": [
+                "extracted_images/Treinamento 2/slide_17_img_45.png",
+                "extracted_images/Treinamento 2/slide_17_img_46.png",
+                "extracted_images/Treinamento 2/slide_17_img_47.png",
+                "extracted_images/Treinamento 2/slide_17_img_48.png",
+                "extracted_images/Treinamento 2/slide_17_img_49.png",
+                "extracted_images/Treinamento 2/slide_17_img_50.png"
+            ]
+        },
+        {
+            "slide_number": 19,
+            "title": "",
+            "text": "O AI Readiness Assessment é uma avaliação que mede o nível de preparação da sua organização para adotar soluções de Inteligência Artificial (IA), incluindo ferramentas como o Microsoft Copilot.\nAi Readiness Assessment\nAssessments | AI Readiness Assessment\nAI Readiness Assessment - Oct 29, 2025 - 10:53:59 AM - Assessments | Microsoft Learn",
+            "images": [
+                "extracted_images/Treinamento 2/slide_19_img_55.png",
+                "extracted_images/Treinamento 2/slide_19_img_56.png",
+                "extracted_images/Treinamento 2/slide_19_img_57.png"
+            ]
+        },
+        {
+            "slide_number": 22,
+            "title": "",
+            "text": "Qual painel mostra métricas de engajamento e impacto do uso do Copilot na empresa?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_22_img_66.png",
+                "extracted_images/Treinamento 2/slide_22_img_67.png"
+            ]
+        },
+        {
+            "slide_number": 24,
+            "title": "",
+            "text": "O Viva Insights Copilot é um recurso dentro do Microsoft Viva que combina inteligência artificial com análises avançadas para ajudar líderes, gestores e analistas a entender como o Microsoft 365 Copilot está sendo usado na organização e qual é seu impacto na produtividade.\nO que é o Viva Insights?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_24_img_69.png",
+                "extracted_images/Treinamento 2/slide_24_img_70.png",
+                "extracted_images/Treinamento 2/slide_24_img_71.png"
+            ]
+        },
+        {
+            "slide_number": 25,
+            "title": "",
+            "text": "Como configurar o Viva Insights o Painel do Copilot?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_25_img_72.png",
+                "extracted_images/Treinamento 2/slide_25_img_73.png",
+                "extracted_images/Treinamento 2/slide_25_img_74.png",
+                "extracted_images/Treinamento 2/slide_25_img_75.png"
+            ]
+        },
+        {
+            "slide_number": 26,
+            "title": "",
+            "text": "O Copilot Pulse é um recurso integrado ao Microsoft Viva Pulse que ajuda líderes e administradores a medir o impacto e a percepção do uso do Microsoft 365 Copilot dentro da organização. Ele funciona como um mecanismo de pesquisa rápida (Pulse surveys) para capturar feedback e sentimento dos usuários sobre a adoção do Copilot, complementando métricas técnicas com dados qualitativos.\nO que é o Viva Pulse?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_26_img_76.png",
+                "extracted_images/Treinamento 2/slide_26_img_77.png",
+                "extracted_images/Treinamento 2/slide_26_img_78.png",
+                "extracted_images/Treinamento 2/slide_26_img_79.png",
+                "extracted_images/Treinamento 2/slide_26_img_80.png",
+                "extracted_images/Treinamento 2/slide_26_img_81.png"
+            ]
+        },
+        {
+            "slide_number": 27,
+            "title": "",
+            "text": "O que é o Viva Pulse?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_27_img_82.png",
+                "extracted_images/Treinamento 2/slide_27_img_83.png",
+                "extracted_images/Treinamento 2/slide_27_img_84.png",
+                "extracted_images/Treinamento 2/slide_27_img_85.png"
+            ]
+        },
+        {
+            "slide_number": 29,
+            "title": "",
+            "text": "Quais métricas você pode visualizar no Microsoft 365 Admin Center para acompanhar o uso do Copilot?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_29_img_90.png",
+                "extracted_images/Treinamento 2/slide_29_img_91.png"
+            ]
+        },
+        {
+            "slide_number": 35,
+            "title": "",
+            "text": "Como começar o Monitoramento do Copilot?\nPontuação de Adoção - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/Treinamento 2/slide_35_img_123.png",
+                "extracted_images/Treinamento 2/slide_35_img_124.png",
+                "extracted_images/Treinamento 2/slide_35_img_125.png",
+                "extracted_images/Treinamento 2/slide_35_img_126.png",
+                "extracted_images/Treinamento 2/slide_35_img_127.png",
+                "extracted_images/Treinamento 2/slide_35_img_128.png"
+            ]
+        },
+        {
+            "slide_number": 36,
+            "title": "",
+            "text": "Como começar o Monitoramento do Copilot?\nUso - admin center do Microsoft 365\nMicrosoft 365 admin Center",
+            "images": [
+                "extracted_images/Treinamento 2/slide_36_img_129.png",
+                "extracted_images/Treinamento 2/slide_36_img_130.png",
+                "extracted_images/Treinamento 2/slide_36_img_131.png"
+            ]
+        },
+        {
+            "slide_number": 37,
+            "title": "",
+            "text": "Qual é a principal função dos Agentes 365 no Microsoft 365 Admin Center?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_37_img_132.png",
+                "extracted_images/Treinamento 2/slide_37_img_133.png"
+            ]
+        },
+        {
+            "slide_number": 40,
+            "title": "",
+            "text": "Agents 365\nUso - admin center do Microsoft 365\nO que são Servidores MCP? (Microsoft Connector Platform)\nSão conectores seguros que permitem que agentes e fluxos de IA acessem dados e executem ações em aplicativos Microsoft (SharePoint, Teams, Outlook, etc.) sem precisar criar integrações manuais.\u000bEles garantem governança, autenticação e padronização",
+            "images": [
+                "extracted_images/Treinamento 2/slide_40_img_140.png",
+                "extracted_images/Treinamento 2/slide_40_img_141.png",
+                "extracted_images/Treinamento 2/slide_40_img_142.png",
+                "extracted_images/Treinamento 2/slide_40_img_143.png"
+            ]
+        },
+        {
+            "slide_number": 41,
+            "title": "",
+            "text": "FORMS\nQual é a principal função do Copilot Studio Kit?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_41_img_144.png",
+                "extracted_images/Treinamento 2/slide_41_img_145.png"
+            ]
+        },
+        {
+            "slide_number": 43,
+            "title": "",
+            "text": "O que é o Copilot Studio Kit Analytics?\nInventário de agentes: visão geral de todos os agentes no tenant, com detalhes sobre recursos, autenticação e fontes de conhecimento.\nKPIs de conversação: métricas agregadas para medir desempenho (taxa de engajamento, resolução, abandono, CSAT).\nTestes automatizados: simulação de cenários para validar respostas e qualidade.\nIntegração com Power BI: dashboards prontos para análise avançada.\nSincronização com SharePoint: para enriquecer a base de conhecimento dos agentes.\nO relatório de Copilot Studio\nInventário de agentes\nRecursos utilizados\nMakers e ambientes\nConectores, fluxos, volumetrias e afins\nTestes e revisão segurança\nHomeCoE - Dynamics 365\nO Copilot Studio Kit é um conjunto de ferramentas criado para aprimorar a experiência no Microsoft Copilot Studio, ajudando desenvolvedores e makers a criar, testar e otimizar agentes personalizados (copilots) com IA generativa. Ele é mantido pelo Power CAT (Customer Advisory Team) e oferece recursos avançados para governança, testes e personalização.",
+            "images": [
+                "extracted_images/Treinamento 2/slide_43_img_147.png",
+                "extracted_images/Treinamento 2/slide_43_img_148.png",
+                "extracted_images/Treinamento 2/slide_43_img_149.png",
+                "extracted_images/Treinamento 2/slide_43_img_150.png",
+                "extracted_images/Treinamento 2/slide_43_img_151.png"
+            ]
+        },
+        {
+            "slide_number": 44,
+            "title": "",
+            "text": "Qual é o principal objetivo do DSPM (Data Security Posture Management) para IA no Microsoft Purview?\nFORMS",
+            "images": [
+                "extracted_images/Treinamento 2/slide_44_img_152.png"
+            ]
+        }
+    ]
+}

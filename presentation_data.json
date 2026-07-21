@@ -1,0 +1,285 @@
+[
+  {
+    "id": "slide_9",
+    "type": "content",
+    "title": "Slide 9",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_9.png"
+  },
+  {
+    "id": "slide_10",
+    "type": "content",
+    "title": "Slide 10",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_10.png"
+  },
+  {
+    "id": "slide_11",
+    "type": "quiz",
+    "title": "Pergunta 1: Os Riscos da Inteligência Artificial",
+    "question": "Quais riscos isso traria se não implementar segurança para IA?",
+    "options": [
+      "Vazamento de dados confidenciais e estratégicos (financeiros, RH, etc).",
+      "Violação de leis de privacidade, como a LGPD, ao expor dados pessoais.",
+      "Amplificação de acessos indevidos através de permissões herdadas incorretas.",
+      "Danos irreparáveis à reputação da marca e perda de confiança de clientes.",
+      "Todas as alternativas acima representam riscos críticos de não agir."
+    ],
+    "correct": "all",
+    "image": "slides_pdf_images/slide_11.png",
+    "explanation": "Todas as opções estão corretas! O oversharing (compartilhamento excessivo) sem governança permite que uma IA acesse informações que deveriam ser restritas, gerando graves incidentes regulatórios, financeiros e de imagem.",
+    "points": 1000
+  },
+  {
+    "id": "slide_13",
+    "type": "content",
+    "title": "Slide 13",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_13.png"
+  },
+  {
+    "id": "slide_14",
+    "type": "content",
+    "title": "Slide 14",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_14.png"
+  },
+  {
+    "id": "slide_15",
+    "type": "content",
+    "title": "Slide 15",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_15.png"
+  },
+  {
+    "id": "slide_16",
+    "type": "content",
+    "title": "Slide 16",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_16.png"
+  },
+  {
+    "id": "slide_17",
+    "type": "content",
+    "title": "Slide 17",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_17.png"
+  },
+  {
+    "id": "slide_18",
+    "type": "content",
+    "title": "Slide 18",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_18.png"
+  },
+  {
+    "id": "slide_19",
+    "type": "content",
+    "title": "Slide 19",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_19.png"
+  },
+  {
+    "id": "slide_20",
+    "type": "content",
+    "title": "Slide 20",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_20.png"
+  },
+  {
+    "id": "slide_21",
+    "type": "content",
+    "title": "Slide 21",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_21.png"
+  },
+  {
+    "id": "slide_22",
+    "type": "content",
+    "title": "Slide 22",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_22.png"
+  },
+  {
+    "id": "slide_23",
+    "type": "content",
+    "title": "Slide 23",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_23.png"
+  },
+  {
+    "id": "slide_24",
+    "type": "content",
+    "title": "Slide 24",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_24.png"
+  },
+  {
+    "id": "slide_25",
+    "type": "content",
+    "title": "Slide 25",
+    "subtitle": "",
+    "text": "",
+    "image": "slides_pdf_images/slide_25.png"
+  },
+  {
+    "id": "quiz_1",
+    "type": "quiz",
+    "title": "Pergunta 1: Fundamento de Segurança",
+    "question": "Qual o primeiro passo indispensável antes de distribuir licenças do Copilot para a empresa?",
+    "options": [
+      "Sanear permissões legadas e estruturar a governança de dados no Purview e SharePoint.",
+      "Confiar exclusivamente que a engenharia de prompt do usuário irá impedir o vazamento.",
+      "Habilitar o Copilot apenas para a equipe de TI e bloquear o acesso aos diretores.",
+      "Assinar um termo de responsabilidade com cada usuário e liberar o ambiente sem travas."
+    ],
+    "correct": 0,
+    "image": "slides_pdf_images/slide_26.png",
+    "explanation": "Exato! Para garantir a segurança do Copilot, o primeiro passo indispensável é sanear as permissões e classificar os dados corporativos (Purview & SharePoint) para evitar oversharing!",
+    "points": 1000
+  },
+  {
+    "id": "slide_fase1",
+    "type": "content",
+    "title": "Fase 1: O Escudo do Microsoft Purview",
+    "subtitle": "Proteção de Dados e Prevenção de Vazamento (DLP)",
+    "text": "Como o Microsoft Purview classifica e protege relatórios financeiros, dados de clientes e documentos confidenciais.",
+    "image": "slides_pdf_images/slide_27.png"
+  },
+  {
+    "id": "quiz_purview",
+    "type": "quiz",
+    "title": "Desafio 1: Microsoft Purview (DLP)",
+    "question": "Um funcionário tenta copiar dados de cartões de crédito e salários de uma planilha e colar no ChatGPT público ou enviar por e-mail externo. Qual mecanismo impede a exposição?",
+    "options": [
+      "O Microsoft Purview Data Loss Prevention (DLP), que detecta a sensibilidade e bloqueia a exfiltração em tempo real.",
+      "O Microsoft Defender Antivírus local instalado na máquina do usuário.",
+      "A auditoria manual semanal realizada pela equipe de compliance da empresa.",
+      "O bloqueio genérico de downloads do navegador corporativo."
+    ],
+    "correct": 0,
+    "image": "slides_pdf_images/slide_28.png",
+    "explanation": "Correto! O Microsoft Purview DLP identifica automaticamente dados sensíveis (PII, cartões, salários) e aplica bloqueio e criptografia instantâneos!",
+    "points": 1000
+  },
+  {
+    "id": "slide_fase2",
+    "type": "content",
+    "title": "Fase 2: A Muralha do SharePoint (SAM)",
+    "subtitle": "SharePoint Advanced Management contra Oversharing",
+    "text": "Como restringir o alcance de busca do Copilot e corrigir links legados compartilhados com toda a organização.",
+    "image": "slides_pdf_images/slide_29.png"
+  },
+  {
+    "id": "quiz_sharepoint",
+    "type": "quiz",
+    "title": "Desafio 2: SharePoint & Oversharing",
+    "question": "Um site antigo do SharePoint continha relatórios financeiros acessíveis para 'Todos da Organização'. Como evitar que o Copilot indexe esses dados para usuários não autorizados?",
+    "options": [
+      "Aplicar Restrição de Acesso ao Site (Site Access Restriction) e governança de Oversharing via SharePoint SAM.",
+      "Desativar o serviço de indexação de busca local do Windows 11.",
+      "Excluir o histórico de conversas e prompts do Copilot ao final de cada expediente.",
+      "Mudar a extensão dos arquivos confidenciais de .xlsx para formato .csv."
+    ],
+    "correct": 0,
+    "image": "slides_pdf_images/slide_30.png",
+    "explanation": "Excelente! O SharePoint Advanced Management (SAM) permite restringir o escopo de acesso e corrigir oversharing em massa!",
+    "points": 1000
+  },
+  {
+    "id": "slide_fase3",
+    "type": "content",
+    "title": "Fase 3: O Guardião de Identidade (Microsoft Entra ID)",
+    "subtitle": "Zero Trust e Acesso Condicional Inteligente",
+    "text": "Como garantir que cada acesso ao Copilot venha de um usuário legítimo e de um dispositivo seguro.",
+    "image": "slides_pdf_images/slide_31.png"
+  },
+  {
+    "id": "quiz_entra",
+    "type": "quiz",
+    "title": "Desafio 3: Microsoft Entra ID",
+    "question": "Um atacante tenta utilizar um par de credenciais vazadas na Dark Web para logar no Copilot corporativo a partir de uma localização anômala. O que barra o acesso?",
+    "options": [
+      "Políticas de Acesso Condicional (Conditional Access) do Entra ID combinadas com verificação de Risco de Login e MFA.",
+      "O filtro de SPAM e Phishing do Microsoft Exchange Online.",
+      "A alteração preventiva da senha de rede Wi-Fi da empresa.",
+      "A criptografia de disco BitLocker instalada no notebook corporativo."
+    ],
+    "correct": 0,
+    "image": "slides_pdf_images/slide_32.png",
+    "explanation": "Perfeito! O Microsoft Entra ID analisa o risco da tentativa de login (IP, dispositivo, localização) e bloqueia o acesso suspeito imediatamente!",
+    "points": 1000
+  },
+  {
+    "id": "slide_fase4",
+    "type": "content",
+    "title": "Fase 4: A Armadura Mobile (Microsoft Intune)",
+    "subtitle": "Gerenciamento de Dispositivos e Proteção de Aplicativos (MAM)",
+    "text": "Como impedir o vazamento de dados em celulares corporativos e pessoais (BYOD).",
+    "image": "slides_pdf_images/slide_33.png"
+  },
+  {
+    "id": "quiz_intune",
+    "type": "quiz",
+    "isSandbox": true,
+    "title": "Desafio 4: Microsoft Intune (MAM)",
+    "question": "Em um dispositivo móvel pessoal (BYOD), um colaborador tenta copiar um resumo confidencial gerado pelo Copilot e colar num aplicativo pessoal. Qual tecnologia impede essa ação?",
+    "options": [
+      "Políticas de Proteção de Aplicativos (MAM) do Microsoft Intune com isolamento de contêiner e bloqueio de recortar/copiar/colar.",
+      "O bloqueio da tela do smartphone por biometria ou reconhecimento facial.",
+      "A desativação das conexões de Bluetooth e localização GPS do dispositivo.",
+      "A limitação do consumo de dados móveis 5G no sistema operacional."
+    ],
+    "correct": 0,
+    "image": "slides_pdf_images/slide_34.png",
+    "explanation": "Exatamente! O Intune MAM isola os dados corporativos em um contêiner protegido e impede a transferência (copiar/colar) para apps não autorizados!",
+    "points": 1000
+  },
+  {
+    "id": "slide_fase5",
+    "type": "content",
+    "title": "Fase Final: O Desafio dos Campeões de Governança",
+    "subtitle": "Combinando todas as ferramentas da Microsoft",
+    "text": "Como unir Purview, SharePoint SAM, Entra ID e Intune para criar a estratégia perfeita de IA Corporativa.",
+    "image": "slides_pdf_images/slide_35.png"
+  },
+  {
+    "id": "quiz_final",
+    "type": "quiz",
+    "isSandbox": true,
+    "title": "Desafio Final: A Estratégia Perfeita de IA",
+    "question": "Para implementar o Copilot para 1.000 usuários com 100% de conformidade técnica e segurança, qual é a ordem estratégica recomendada pela Microsoft?",
+    "options": [
+      "1º Rotulagem de Sensibilidade (Purview) ➔ 2º Correção de Oversharing (SharePoint SAM) ➔ 3º Acesso Condicional (Entra ID) ➔ 4º Proteção de Aplicativos (Intune MAM).",
+      "1º Liberar licenças do Copilot ➔ 2º Aguardar relatórios de uso ➔ 3º Criar regras de bloqueio no Purview após incidentes.",
+      "1º Instalar antivírus ➔ 2º Bloquear acessos de celulares ➔ 3º Treinar os gestores ➔ 4º Liberar a IA sem restrições no SharePoint.",
+      "1º Comprar licenças E5 ➔ 2º Trancar todo o SharePoint ➔ 3º Exigir aprovação manual da TI para cada prompt do usuário."
+    ],
+    "correct": 0,
+    "image": "slides_pdf_images/slide_36.png",
+    "explanation": "Sensacional! Você dominou o Framework Oficial de Governança e Segurança em IA da Microsoft! 🏆🚀",
+    "points": 1500
+  },
+  {
+    "id": "slide_podcast",
+    "type": "content",
+    "title": "🏆 Pódio Final e Encerramento",
+    "subtitle": "Parabéns aos Campeões da Governança de IA!",
+    "text": "Veja no telão e nos celulares quem ficou no topo do Ranking da Sala!",
+    "image": "slides_pdf_images/slide_37.png"
+  }
+]

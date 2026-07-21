@@ -1,0 +1,13 @@
+{
+  "name": "copilot-interactive-presentation",
+  "version": "1.0.0",
+  "description": "Interactive multiplayer real-time presentation and quiz game about Microsoft Copilot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Microsoft Copilot</title>
+  <style>
+    :root {
+      --bg-color: #141414;
+      --sidebar-bg: #1f1f1f;
+      --border-color: #333333;
+      --text-main: #f3f2f1;
+      --text-muted: #a19f9d;
+      --hover-bg: #2d2d2d;
+      --accent-color: #0078d4;
+      --input-bg: #262626;
+      --chip-bg: #2d2d2d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* === SIDEBAR === */
+    .sidebar {
+      width: 280px;
+      min-width: 280px;
+      background-color: var(--sidebar-bg);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      z-index: 90;
+      flex-shrink: 0;
+    }
+
+    .sidebar-header {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sidebar-header .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      background-color: var(--input-bg);
+      border-radius: 20px;
+      padding: 4px;
+      margin: 0 16px 16px 16px;
+    }
+    .nav-tab {
+      flex: 1;
+      text-align: center;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      border-radius: 16px;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+    .nav-tab.active {
+      background-color: #3b3a39;
+      color: var(--text-main);
+    }
+
+    .new-chat-btn {
+      margin: 0 16px 16px 16px;
+      background-color: var(--hover-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 10px 16px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .new-chat-btn:hover { background-color: #3b3a39; }
+
+    .menu-list {
+      list-style: none;
+      padding: 0 8px;
+    }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .menu-item:hover { background-color: var(--hover-bg); color: var(--text-main); }
+    .menu-item svg { width: 16px; height: 16px; }
+
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 16px 24px 8px 24px;
+      font-weight: 600;
+    }
+
+    .sidebar-scroll {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+    .sidebar-scroll::-webkit-scrollbar-thumb { background: #484644; border-radius: 3px; }
+
+    .chat-history-item {
+      padding: 8px 16px 8px 24px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .chat-history-item:hover { background-color: var(--hover-bg); color: var(--text-main); }
+
+    .profile-section {
+      padding: 16px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .profile-section:hover { background-color: var(--hover-bg); }
+    .profile-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0078d4, #107c10);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+    .profile-details {
+      display: flex;
+      flex-direction: column;
+    }
+    .profile-name { font-size: 0.85rem; font-weight: 600; }
+    .profile-badge { font-size: 0.7rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; margin-top: 2px;}
+
+    /* === MAIN CONTENT === */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: var(--bg-color);
+    }
+
+    .top-header {
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      background: var(--bg-color);
+      flex-shrink: 0;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .pill {
+      background-color: var(--input-bg);
+      border: 1px solid var(--border-color);
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+    .toggle-switch {
+      width: 36px;
+      height: 20px;
+      background-color: #f3f2f1;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 16px;
+      height: 16px;
+      background-color: #202020;
+      border-radius: 50%;
+    }
+
+    .ranking-header-btn {
+      background: rgba(0, 120, 212, 0.2);
+      border: 1px solid #0078d4;
+      color: #2899f5;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .ranking-header-btn:hover {
+      background: #0078d4;
+      color: white;
+    }
+
+    /* CHAT STREAM CONTAINER */
+    .chat-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      scroll-behavior: smooth;
+    }
+    .chat-content-wrapper {
+      width: 100%;
+      max-width: 780px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .greeting-container {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      transition: all 0.4s ease;
+    }
+    .greeting {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    /* Message Bubbles */
+    .copilot-msg-group {
+      display: flex;
+      gap: 14px;
+      width: 100%;
+      animation: fadeIn 0.3s ease;
+    }
+    .copilot-msg-group.user {
+      flex-direction: row-reverse;
+    }
+    .copilot-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .copilot-avatar.bot {
+      background: linear-gradient(135deg, #0078d4, #107c10);
+      color: #fff;
+    }
+    .copilot-avatar.user {
+      background: #3b3a39;
+      color: #fff;
+    }
+    .copilot-bubble {
+      background: #252525;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 16px 20px;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--text-main);
+      max-width: 85%;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+    .copilot-msg-group.user .copilot-bubble {
+      background: #0078d4;
+      border-color: #0078d4;
+      color: #ffffff;
+      border-bottom-right-radius: 4px;
+    }
+    .copilot-msg-group.bot .copilot-bubble {
+      border-bottom-left-radius: 4px;
+    }
+
+    /* Quiz Option Cards - Light White & Bizapp Blue Theme */
+    .quiz-card-group {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .quiz-option-card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      color: #0f172a;
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.35;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: all 0.2s ease;
+    }
+    .quiz-option-card:hover {
+      background: #f0f9ff;
+      border-color: #0078d4;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 120, 212, 0.15);
+    }
+    .quiz-option-card.selected {
+      background: linear-gradient(135deg, #0078d4 0%, #7e22ce 100%);
+      border-color: #0078d4;
+      color: #ffffff;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(0, 120, 212, 0.3);
+    }
+    .quiz-option-letter {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #eff6ff;
+      color: #0078d4;
+      border: 1px solid #bfdbfe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .quiz-option-card.selected .quiz-option-letter {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* INPUT BOTTOM AREA */
+    .input-bottom-bar {
+      padding: 16px 24px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      flex-shrink: 0;
+      background: var(--bg-color);
+    }
+    .input-container {
+      width: 100%;
+      max-width: 780px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .input-box {
+      width: 100%;
+      background-color: var(--input-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 16px 90px 16px 48px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      transition: all 0.2s ease;
+    }
+    .input-box:focus-within {
+      background-color: #323130;
+      border-color: #605e5c;
+    }
+    .plus-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-main);
+      cursor: pointer;
+      z-index: 10;
+    }
+    .input-field {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      font-size: 1rem;
+      outline: none;
+    }
+    .input-field::placeholder { color: var(--text-muted); }
+    
+    .input-actions {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 10;
+    }
+    .input-actions svg {
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .input-actions svg:hover { color: var(--text-main); }
+    .send-btn {
+      background: #0078d4;
+      color: white;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .chips-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      background-color: var(--chip-bg);
+      padding: 8px 16px;
+      border-radius: 16px;
+      font-size: 0.85rem;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .chip:hover { background-color: var(--hover-bg); }
+
+    /* LOGIN MODAL OVERLAY */
+    .login-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(12px);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .login-card {
+      background: #202020;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 32px 28px;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+
+    /* RANKING MODAL OVERLAY */
+    .ranking-modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(8px);
+      z-index: 500;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .ranking-box {
+      background: #202020;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 24px;
+      width: 100%;
+      max-width: 500px;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Typing Dots */
+    .typing-dots span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      margin: 0 2px;
+      animation: typing 1.4s infinite ease-in-out both;
+    }
+    .typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+    .typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+    @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Responsive Mobile Sidebar */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: fixed;
+        left: 0; top: 0; bottom: 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+      .sidebar.open {
+        transform: translateX(0);
+      }
+      .greeting { font-size: 1.6rem; }
+    }
+
+    svg { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN OVERLAY -->
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-card">
+      <div style="width: 54px; height: 54px; background: linear-gradient(135deg, #0078d4, #7738d8); border-radius: 14px; margin: 0 auto 16px auto; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 24px rgba(0, 120, 212, 0.4);">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">Conectar ao Microsoft Copilot</h2>
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 24px;">Identifique-se para participar da apresentação interativa ao vivo.</p>
+
+      <div id="join-error" style="color: #f43f5e; font-size: 0.88rem; margin-bottom: 12px; display: none;"></div>
+
+      <div style="text-align: left; margin-bottom: 16px;">
+        <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 6px; font-weight: 600;">Seu Nome / Login</label>
+        <input type="text" id="player-name" style="width: 100%; background: var(--input-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 12px 14px; color: #fff; font-size: 0.95rem; outline: none;" placeholder="Ex: Leonardo Idalgo" maxlength="18" autocomplete="off">
+      </div>
+
+      <div style="text-align: left; margin-bottom: 24px;">
+        <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 6px; font-weight: 600;">Avatar do Perfil</label>
+        <div style="display: flex; gap: 8px; justify-content: space-between;">
+          <button class="avatar-btn selected" data-avatar="👨‍💻" style="font-size: 1.3rem; padding: 8px; background: rgba(255,255,255,0.05); border: 1px solid #0078d4; border-radius: 10px; cursor: pointer;">👨‍💻</button>
+          <button class="avatar-btn" data-avatar="👩‍💻" style="font-size: 1.3rem; padding: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 10px; cursor: pointer;">👩‍💻</button>
+          <button class="avatar-btn" data-avatar="🚀" style="font-size: 1.3rem; padding: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 10px; cursor: pointer;">🚀</button>
+          <button class="avatar-btn" data-avatar="🤖" style="font-size: 1.3rem; padding: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 10px; cursor: pointer;">🤖</button>
+          <button class="avatar-btn" data-avatar="⚡" style="font-size: 1.3rem; padding: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); border-radius: 10px; cursor: pointer;">⚡</button>
+        </div>
+      </div>
+
+      <button id="btn-join" style="width: 100%; background: #0078d4; color: white; border: none; padding: 14px; border-radius: 10px; font-size: 0.95rem; font-weight: 700; cursor: pointer;">
+        Entrar na Sessão do Copilot
+      </button>
+    </div>
+  </div>
+
+  <!-- SIDEBAR (COPILOT DESKTOP LAYOUT) -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-container">
+        <img src="logos/logotipo-branco.png" alt="Bizapp Logo" style="height: 28px; object-fit: contain;">
+      </div>
+      <svg width="20" height="20" viewBox="0 0 24 24" style="cursor:pointer;" id="sidebar-toggle-btn"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+    </div>
+
+    <div class="nav-tabs">
+      <div class="nav-tab active">Chat</div>
+      <div class="nav-tab">Cowork</div>
+    </div>
+
+    <button class="new-chat-btn" onclick="resetChatView()">
+      <svg width="18" height="18" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      Novo chat
+    </button>
+
+    <div class="sidebar-scroll">
+      <ul class="menu-list">
+        <li class="menu-item"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> Pesquisar</li>
+        <li class="menu-item"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> Biblioteca</li>
+        <li class="menu-item"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> Notebooks</li>
+        <li class="menu-item"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Agentes</li>
+      </ul>
+
+      <div class="section-title">Fixado</div>
+      <ul class="menu-list">
+        <li class="menu-item" id="sidebar-ranking-btn" style="color: #2899f5; font-weight: 600;"><span style="color:#fbbf24; font-size:1.1rem; line-height:0; margin-right:4px;">🏆</span> Ranking da Sala</li>
+        <li class="menu-item"><span style="color:#0078d4; font-size:1.2rem; line-height:0; margin-right:4px;">•</span> Pesquisador</li>
+        <li class="menu-item"><span style="color:#d13438; font-size:1.2rem; line-height:0; margin-right:4px;">•</span> Analista</li>
+      </ul>
+
+      <div class="section-title">Chats</div>
+      <div class="chat-history-item">Time Sheet e E-mails de 10 Jul</div>
+      <div class="chat-history-item">Aplicativo para Missão Belém...</div>
+      <div class="chat-history-item">Notícias sobre vazamento e go...</div>
+      <div class="chat-history-item">Convite para Treinamento Esp...</div>
+      <div class="chat-history-item">Configuração Complexa do Pu...</div>
+    </div>
+
+    <div class="profile-section">
+      <div class="profile-info">
+        <div class="avatar" id="sidebar-user-avatar">LI</div>
+        <div class="profile-details">
+          <div class="profile-name" id="sidebar-user-name">Leonardo Idalgo</div>
+          <div class="profile-badge">M365 Copilot (Premium) <svg width="12" height="12" viewBox="0 0 24 24" style="margin-left: 4px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+        </div>
+      </div>
+      <svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+    </div>
+  </aside>
+
+  <!-- MAIN AREA (DESKTOP COPILOT CHAT STREAM) -->
+  <main class="main-content">
+    <!-- TOP HEADER BAR -->
+    <div class="top-header">
+      <div class="header-left">
+        <div class="pill">IQ de Trabalho</div>
+        <div style="font-size:0.85rem; color:var(--text-muted); cursor:pointer;">Auto ⌄</div>
+      </div>
+      <div class="header-right">
+        <button class="ranking-header-btn" id="btn-open-ranking">
+          🏆 Ranking (<span id="ranking-count">0</span>)
+        </button>
+        <div class="toggle-container">
+          <span>Novo design</span>
+          <div class="toggle-switch"></div>
+        </div>
+        <svg width="20" height="20" viewBox="0 0 24 24" style="color:var(--text-muted)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" style="color:var(--text-muted)"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      </div>
+    </div>
+
+    <!-- CHAT STREAM CONTAINER -->
+    <div class="chat-container" id="chat-container">
+      <div class="chat-content-wrapper" id="chat-content-wrapper">
+        
+        <!-- INITIAL GREETING -->
+        <div class="greeting-container" id="greeting-container">
+          <h1 class="greeting">Olá, como posso ajudar</h1>
+        </div>
+
+        <!-- MESSAGES INJECTED HERE -->
+        <div id="messages-list" style="display: flex; flex-direction: column; gap: 20px;"></div>
+
+        <!-- TYPING INDICATOR -->
+        <div id="typing-container" style="display: none; width: 100%;">
+          <div class="copilot-msg-group bot">
+            <div class="copilot-avatar bot">🤖</div>
+            <div class="copilot-bubble" style="padding: 10px 16px;">
+              <span style="font-size: 0.82rem; color: var(--text-muted); margin-right: 8px;">Copilot está digitando</span>
+              <span class="typing-dots"><span></span><span></span><span></span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BOTTOM INPUT BAR -->
+    <div class="input-bottom-bar">
+      <div class="input-container">
+        <svg class="plus-icon" width="20" height="20" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        
+        <div class="input-box">
+          <input type="text" id="copilot-input" class="input-field" placeholder="Enviar uma mensagem para o Copilot" autocomplete="off">
+        </div>
+        
+        <div class="input-actions">
+          <svg width="20" height="20" viewBox="0 0 24 24" id="btn-mic"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+          <button class="send-btn" id="btn-send-message">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="chips-container" id="chips-container">
+        <div class="chip">Arquivos</div>
+        <div class="chip">Pessoas</div>
+        <div class="chip">Reuniões</div>
+        <div class="chip"><svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RANKING MODAL -->
+  <div id="ranking-modal" class="ranking-modal">
+    <div class="ranking-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-size: 1.2rem; font-weight: 700; color: #fff;">🏆 Ranking da Sala</h3>
+        <span id="btn-close-ranking" style="cursor: pointer; font-size: 1.4rem; color: var(--text-muted);">&times;</span>
+      </div>
+      <div id="modal-ranking-list" style="overflow-y: auto; flex: 1;">
+        <!-- Leaderboard items -->
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

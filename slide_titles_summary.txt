@@ -1,0 +1,180 @@
+=== NOVO.pptx (38 slides) ===
+Slide 1:  | Controle do Copilot licenças e deploy de Agentes Janeiro 2026
+Slide 2:  | Se uma empresa perguntasse hoje qual licença do Copilot implementar, você saberia exatamente como re
+Slide 3:  | Entender todos os tipos de licença Copilot Chat e Copilot Studio Orientação sobre qual licença Copil
+Slide 4:  | Preços do Microsoft 365 Copilot — agentes de IA | Copilot Studio Licenças do Copilot
+Slide 5:  | Cenário | O365 E3 | M365 E3 | M365 E5 Gerenciamento de identidade e acesso | Faça login no Microsoft
+Slide 6:  | Identificação do Ambiente Mapear quem realmente vai usar o Copilot (áreas, funções, perfis) Identifi
+Slide 7:  | Microsoft 365 Copilot para usuários Assistente de IA dentro do Word, Excel, PowerPoint, Outlook e Te
+Slide 8:  | Estudo de Caso - RUNAWAY Imaginem a Andy Sachs na revista Runway.Ela está se afogando em e‑mails d
+Slide 9:  | Estudo de Caso - RUNAWAY Para salvar a Andy Sachs e permitir que ela:Gerencie o Outlook com respost
+Slide 10:  | Copilot 365 Cht Por Uso (PAYG) ✔ Funciona como um serviço de consumo no Azure, sem licença fixa por 
+Slide 11:  | Como Habilitar o Copilot 365 por uso? Criar uma assinatura Azure Criar um grupo de recursos no Azure
+Slide 12:  | Como Habilitar o Copilot Chat por uso? Cobrança e uso - admin center do Microsoft 365
+Slide 13: Configurar o PAYG para agentes do SharePoint no centro de administração do Microsoft 365Configurar agentes do SharePoint para cobrança conforme o uso - SharePoint no Microsoft 365 | Microsoft Learn | Configurar o PAYG para agentes do SharePoint no centro de administração do Microsoft 365Configurar 
+Slide 14: Exibir informações de uso e cobrançaExibir o uso e a cobrança do plano pago conforme o uso - Power Platform | Microsoft LearnConfigurar agentes do SharePoint para cobrança conforme o uso - SharePoint no Microsoft 365 | Microsoft Learn | Exibir informações de uso e cobrançaExibir o uso e a cobrança do plano pago conforme o uso - Power 
+Slide 15:  | Estudo de Caso – OS INCRIVEIS Imagine a rotina do Sr. Incrível: Ele passa 29 dias do mês esmagando r
+Slide 16:  | Copilot Studio O Copilot Studio é a plataforma da Microsoft usada para criar, personalizar e publica
+Slide 17:  | Dois tipos de licenças 2 Tipos de licença Copilot Studio
+Slide 18:  | Dois tipos de licenças Como habilitar o Copilot Studio Pré Pago Serviços de Compra do Marketplace - 
+Slide 19:  | Dois tipos de licenças Limitações da Licença Copilot Studio (Trial) Serviços de Compra do Marketplac
+Slide 20:  | Estudo de Caso – MontrosSA Para atender a esse processo industrial constante e previsível de 25.000 
+Slide 21:  | Dois tipos de licenças 2 Tipos de licença Copilot Studio
+Slide 22:  | Dois tipos de licenças Como habilitar Copilot Studio Por Uso Página Inicial - Power Platform admin c
+Slide 23:  | Estudo de Caso – COPA QUADRIBOL O Ministério da Magia está organizando a Copa Mundial de Quadribol. 
+Slide 24:  | Estudo de Caso – COPA QUADRIBOL O Ministério da Magia está organizando a Copa Mundial de Quadribol. 
+Slide 25:  | Agent Builder
+Slide 26:  | Copilot Security
+Slide 27:  | Como Fazer Deploy de um Agente? Canais - Agente 1 | Microsoft Copilot Studio
+Slide 28:  | Recapitulação
+Slide 29:  | 
+Slide 30: OBRIGADO!! | OBRIGADO!!
+Slide 31:  | 
+Slide 32:  | 
+Slide 33:  | SUBTITLES H1 Demo text Body Text Demo Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+Slide 34:  | 
+Slide 35:  | 
+Slide 36:  | Ícones
+Slide 37:  | Ícones
+Slide 38:  | 
+
+=== Template Apresentação com Copilot - Bizapp 2026.pptx (89 slides) ===
+Slide 1:  | IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots Novembro 2025
+Slide 2:  | IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots Novembro 2025
+Slide 3:  | IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots Novembro 2025
+Slide 4:  | IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots Novembro 2025
+Slide 5:  | IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots Novembro 2025
+Slide 6:  | Segurança IA responsável Governança e monitoramento Implantação e administração Objetivo do Treiname
+Slide 7:  | Implantação e administração
+Slide 8:  | 
+Slide 9:  | IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots Novembro 2025
+Slide 10:  | TIME TO 100M USERS (years) 20 15 10 5 3 1 Smart Phones 16 years Internet 7 years Instagram 2.5 years
+Slide 11:  | Se uma inteligência artificial pudesse acessar qualquer dado da empresa, você saberia exatamente qua
+Slide 12:  | Vazamentos de dados: a ameaça silenciosa das IAs genéricas na empresas
+Slide 13:  | 
+Slide 14:  | 
+Slide 15:  | A segurança vem antes do prompt
+Slide 16:  | A segurança vem antes do prompt
+Slide 17:  | 1 Os prompts do usuário do Microsoft 365 Apps são enviados para o Copilot 2 O Copilot acessa o Graph
+Slide 18:  | Cenário | O365 E3 | M365 E3 | M365 E5 Gerenciamento de identidade e acesso | Faça login no Microsoft
+Slide 19:  | O que é Copilot Chat vs Microsoft 365 Copilot? Copilot Chat IA básica para toda a organização Chat g
+Slide 20:  | Aonde estão meus dados?
+Slide 21: Responsabilidades compartilhadas de segurança para uso de IA para Microsoft Copilot para Microsoft 365 | Responsabilidades compartilhadas de segurança para uso de IA para Microsoft Copilot para Microsoft 3
+Slide 22: 4 PilaresDa Segurança ao Copilot | 4 PilaresDa Segurança ao Copilot 1 Gerenciar usuários com privilégios e riscos Microsoft Entra ID 2
+Slide 23: Controle o acesso ao CopilotMicrosoft Entra ID | 2 Reduza o risco do dispositivocom gerenciamento de endpoint Microsoft Intune Microsoft 365 Copilot
+Slide 24: Gerenciar DispositivosMicrosoft Intune | 1 Gerenciar usuários com privilégios e riscoscom gerenciamento de identidade e acesso Microsoft Entr
+Slide 25:  | Pergunta 1 Qual a primeira coisa que precisamos fazer para dar segurança ao Copilot?
+Slide 26:  | A melhor maneira de manter o Copilot seguro é garantir que o ambiente onde ele funciona também seja 
+Slide 27:  | Segurança para avaliação de IA
+Slide 28:  | Como proteger o seu ambiente?5 passos para manter seu ambiente Microsoft Seguro Microsoft 365 admin
+Slide 29:  | Microsoft 365 admin Center Verificar explicitamente O Zero Trust pressupõe que nenhum usuário ou dis
+Slide 30: Criar um grupo de segurança Copilot 365  | Criar um grupo de segurança Copilot 365 Microsoft 365 admin Center 1 Atribua LicençaCopilot ao Grup
+Slide 31: Criar um grupo de segurança Copilot 365  | Criar um grupo de segurança Copilot 365 Microsoft 365 admin Center 1 Atribua LicençaCopilot ao Grup
+Slide 32: No Entra acessar e criar uma nova politica de acesso condicional | No Entra acessar e criar uma nova politica de acesso condicional Microsoft Admin Essa política vai p
+Slide 33:  | 2 Microsoft Entra ID
+Slide 34:  | 3 Microsoft Entra ID
+Slide 35:  | 4 Microsoft Sharepoint Copilot respeita suas permissões: mostra apenas o que você já poderia acessar
+Slide 36:  | 4 Microsoft Sharepoint Acessos e permissões no Sharepoint
+Slide 37:  | 4 Microsoft Sharepoint
+Slide 38:  | 4 Microsoft Sharepoint
+Slide 39:  | 4 Microsoft Sharepoint
+Slide 40:  | 5 Microsoft Sharepoint Restricted SharePoint Search Ele serve para limitar o escopo da pesquisa do C
+Slide 41: Criar um grupo de segurança Copilot 365  | Criar um grupo de segurança Copilot 365 Microsoft 365 admin Center Gestão centralizada Facilita o co
+Slide 42:  | 5 Microsoft Sharepoint Compartilhamento Sharepoint Manage sharing settings for SharePoint and OneDri
+Slide 43:  | 5 Microsoft Sharepoint Restricted SharePoint Search Quando utilizar? Cenários com dados altamente se
+Slide 44:  | 5 Restricted SharePoint Search Como faço para ativar? Microsoft Sharepoint Necessário Função adminis
+Slide 45:  | 5 Permitir que somente sites específicos não sejam encontrados dentro da PesquisaComo faço para ati
+Slide 46:  | 5 Permitir que somente sites específicos não sejam encontrados dentro da PesquisaComo faço para ati
+Slide 47:  | 6 Como proteger os Computadores para o Copilot Microsoft Intune O que é o Intune? Microsoft Intune é
+Slide 48:  | 6 Aplicativos do 365 Dentro da Base de segurança Microsoft Intune Bases de referencia de segurança s
+Slide 49:  | 6 Aplicativos do 365 Dentro da Base de segurança Microsoft Intune Como inserir?
+Slide 50:  | 6 Aplicativos do 365 Dentro da Base de segurança Microsoft Intune Como inserir?
+Slide 51:  | 6 Microsoft Purview Microsoft Intune O que é?
+Slide 52:  | 
+Slide 53:  | 
+Slide 54:  | 
+Slide 55:  | 
+Slide 56:  | 
+Slide 57:  | Processo | 7 h | 8h | 9h | 10h | 11h | 12h | 13h | 14h | 15h | 16h | 17h | 18h Atividade 1 Atividade
+Slide 58:  | 
+Slide 59: Risus Tellus Amet Malesuada | Risus Tellus Amet Malesuada Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit n
+Slide 60: Amet Vulputate Elit | Amet Vulputate Elit Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis 
+Slide 61: Vivamus sagittis lacus vel augue laoreet | Vivamus sagittis lacus vel augue laoreet Aenean lacinia bibendum nulla sed consectetur. Integer posu
+Slide 62:  | ITEM | ITEM | ITEM | ITEM | ITEM 000 | 000 | 000 | 000 | 000
+Slide 63:  | ITEM | ITEM | ITEM | ITEM 000 | 000 | 000 | 000
+Slide 64:  | 
+Slide 65:  | 
+Slide 66: Obrigado!! | Obrigado!!
+Slide 67:  | 
+Slide 68:  | 
+Slide 69:  | 
+Slide 70:  | Cargo
+Slide 71: Integer posuere erat a ante. | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultri
+Slide 72:  | 
+Slide 73: Integer posuere erat a ante. | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultri
+Slide 74:  | 
+Slide 75:  | Título da seção bem aqui
+Slide 76:  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, e
+Slide 77:  | 
+Slide 78:  | 
+Slide 79:  | O QUE NÓS IMAGINAMOS, A TECNOLOGIA REALIZA #PURPECIRCLE Soluções que modernizam e transformam as ope
+Slide 80:  | 
+Slide 81:  | Atuando no mercado há mais de 10 anos SOBRE NÓS Clientes +600.000 Usuários ativos +300 Projetos entr
+Slide 82:  | 
+Slide 83:  | 
+Slide 84:  | SUBTITLES H1 Demo text Body Text Demo Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+Slide 85:  | 
+Slide 86:  | 
+Slide 87:  | Ícones
+Slide 88:  | Ícones
+Slide 89:  | 
+
+=== Treinamento 2.pptx (47 slides) ===
+Slide 1:  | Treinamento M365 Copilot – Adoção, Dashboards e Governança Dezembro 2025
+Slide 2:  | 
+Slide 3:  | 
+Slide 4:  | 
+Slide 5:  | Resumo Copilot
+Slide 6:  | Resumo Copilot
+Slide 7:  | Resumo Copilot
+Slide 8:  | Controles de TI – Governança e Segurança
+Slide 9:  | Controles de TI – Governança e Segurança
+Slide 10:  | Você já refletiu sobre o que pode acontecer se não monitorarmos o uso da IA e do Copilot na empresa?
+Slide 11:  | 
+Slide 12:  | Mais de 50% das empresas globais já incorporaram IA em processos. No Brasil, setores como varejo, fi
+Slide 13:  | Qual é o primeiro passo essencial para garantir segurança ao implementar o Copilot na empresa? Forms
+Slide 14:  | 
+Slide 15:  | Passo a Passo para adoção no Copilot Atribuir Licença Fixar Copilot no Desktop e Teams Ai Readiness 
+Slide 16:  | Como fixar o Copilot no Desktop Configurações - admin center do Microsoft 365
+Slide 17:  | Add a name for your app setup policy - Microsoft Teams admin center Como fixar o Copilot no Teams
+Slide 18:  | Chat Chat gratuito e seguro com IA –  alimentado por GPT 4o e aterrado pela web Agents Integrado à e
+Slide 19:  | O AI Readiness Assessment é uma avaliação que mede o nível de preparação da sua organização para ado
+Slide 20:  | Recomendações de Segurança Da Própria Microsoft no Copilot AI Baseline Assessment – Conformidade do 
+Slide 21:  | Mensagens Organizacionais Mensagens organizacionais - admin center do Microsoft 365
+Slide 22:  | Qual painel mostra métricas de engajamento e impacto do uso do Copilot na empresa?
+Slide 23:  | 
+Slide 24:  | O Viva Insights Copilot é um recurso dentro do Microsoft Viva que combina inteligência artificial co
+Slide 25:  | Como configurar o Viva Insights o Painel do Copilot?
+Slide 26:  | O Copilot Pulse é um recurso integrado ao Microsoft Viva Pulse que ajuda líderes e administradores a
+Slide 27:  | O que é o Viva Pulse?
+Slide 28:  | Resultados do Viva
+Slide 29:  | Quais métricas você pode visualizar no Microsoft 365 Admin Center para acompanhar o uso do Copilot?
+Slide 30:  | 
+Slide 31:  | Tipos de Agentes
+Slide 32:  | Tipos de Agentes
+Slide 33:  | Tipos de Agentes
+Slide 34:  | Instalação e Deploy do Copilot e Copilot Studio
+Slide 35:  | Como começar o Monitoramento do Copilot? Pontuação de Adoção - admin center do Microsoft 365
+Slide 36:  | Como começar o Monitoramento do Copilot? Uso - admin center do Microsoft 365 Microsoft 365 admin Cen
+Slide 37:  | Qual é a principal função dos Agentes 365 no Microsoft 365 Admin Center?
+Slide 38:  | 
+Slide 39:  | Agents 365 Uso - admin center do Microsoft 365
+Slide 40:  | Agents 365 Uso - admin center do Microsoft 365 O que são Servidores MCP? (Microsoft Connector Platfo
+Slide 41:  | FORMS Qual é a principal função do Copilot Studio Kit?
+Slide 42:  | 
+Slide 43:  | O que é o Copilot Studio Kit Analytics? Inventário de agentes: visão geral de todos os agentes no te
+Slide 44:  | Qual é o principal objetivo do DSPM (Data Security Posture Management) para IA no Microsoft Purview?
+Slide 45:  | 
+Slide 46:  | DSPM AI Inventário de agentes: visão geral de todos os agentes no tenant, com detalhes sobre recurso
+Slide 47: Obrigado!! | Obrigado!!
+

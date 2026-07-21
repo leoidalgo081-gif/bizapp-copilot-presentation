@@ -1,0 +1,1744 @@
+{
+    "NOVO.pptx": [
+        {
+            "slide_number": 1,
+            "title": "",
+            "text": "Controle do Copilot licenças e deploy de Agentes\nJaneiro 2026",
+            "images": [
+                "extracted_images/NOVO/slide_1_img_0.png",
+                "extracted_images/NOVO/slide_1_img_1.png",
+                "extracted_images/NOVO/slide_1_img_2.png",
+                "extracted_images/NOVO/slide_1_img_3.png",
+                "extracted_images/NOVO/slide_1_img_4.png",
+                "extracted_images/NOVO/slide_1_img_5.png",
+                "extracted_images/NOVO/slide_1_img_6.png",
+                "extracted_images/NOVO/slide_1_img_7.png",
+                "extracted_images/NOVO/slide_1_img_8.png",
+                "extracted_images/NOVO/slide_1_img_9.png",
+                "extracted_images/NOVO/slide_1_img_10.png"
+            ]
+        },
+        {
+            "slide_number": 2,
+            "title": "",
+            "text": "Se uma empresa perguntasse hoje qual licença do Copilot implementar, você saberia exatamente como responder?",
+            "images": [
+                "extracted_images/NOVO/slide_2_img_11.png"
+            ]
+        },
+        {
+            "slide_number": 3,
+            "title": "",
+            "text": "Entender todos os tipos de licença Copilot Chat e Copilot Studio\nOrientação sobre qual licença Copilot implementar para cada cenário e tipo de usuário\nObjetivo do Treinamento\nCapacitar você a recomendar e aplicar a licença Copilot ideal com segurança, técnica e justificativa de negócio\nComo realizar deploys e controle de Copilot 365 Chat e Copilot Studio e implementar no ambiente",
+            "images": [
+                "extracted_images/NOVO/slide_3_img_12.png",
+                "extracted_images/NOVO/slide_3_img_13.png",
+                "extracted_images/NOVO/slide_3_img_14.png"
+            ]
+        },
+        {
+            "slide_number": 4,
+            "title": "",
+            "text": "Preços do Microsoft 365 Copilot — agentes de IA | Copilot Studio\nLicenças do Copilot",
+            "images": [
+                "extracted_images/NOVO/slide_4_img_15.png",
+                "extracted_images/NOVO/slide_4_img_16.png"
+            ]
+        },
+        {
+            "slide_number": 5,
+            "title": "",
+            "text": "Cenário | O365 E3 | M365 E3 | M365 E5\nGerenciamento de identidade e acesso | Faça login no Microsoft 365 Copilot com uma única identidade | • | • | •\nImpor MFA ao acessar o Microsoft 365 para usar o Copilot | Basic MFA | • | •\nHabilitar a redefinição, alteração e desbloqueio de senha do usuário final ao acessar o Microsoft 365 | Cloud only | • | •\nImplemente políticas de Acesso Condicional com base na identidade, dispositivo e localização ao acessar o Microsoft 365 para usar o Copilot | • | •\nHabilite a imposição de políticas de acesso quase em tempo real, avalie eventos críticos e revogue imediatamente o acesso ao Microsoft 365 | • | •\nControlar o acesso por aplicativos de nuvem (Microsoft 365 e terceiros) | •\nRevise quem tem acesso ao conteúdo no Microsoft 365 – Copilot – para reduzir o compartilhamento excessivo | •\nExigir aprovação just-in-time e just-in-time para funções de administrador que podem gerenciar o acesso ao aplicativo Copilot | •\nGerenciamento de endpoints | Envie/implante os aplicativos do Microsoft 365 em dispositivos e conceda acesso ao Copilot nesses aplicativos | • | •\nGerenciar atualizações de aplicativos do Microsoft 365 | • | •\nRestrinja o uso dos aplicativos do Microsoft 365 e do Teams, bem como do Copilot nesses aplicativos, em dispositivos pessoais | • | •\nImpedir salvar arquivos – incluindo aqueles gerados pelo Copilot – em aplicativos desprotegidos | • | •\nLimpe todo o conteúdo de trabalho, incluindo o conteúdo gerado pelo Copilot, se um dispositivo for perdido | • | •\nRevogar o acesso de trabalho em dispositivos não compatíveis | • | •\nSegurança de dados e \nconformidade | Pesquise dados gerados pelo Copilot por conteúdo, pesquisa por palavra-chave, aplique retenção legal e exporte os resultados da pesquisa; investigar incidentes relacionados ao Copilot e responder a litígios | Standard | Standard | Premium\nLogs de auditoria para interações do Copilot | Standard | Standard | Premium\nApply a retention policy for Copilot interactions | Standard | Standard | Automated\nPolíticas de Prevenção contra Perda de Dados para proteger dados confidenciais, gerados pelo Copilot e salvos em locais do Microsoft 365, contra exfiltração | Files & email | Files & email | + Endpoint, Teams\nHerdar rótulos de confidencialidade e citar rótulo de confidencialidade na saída e nas referências no Copilot | • | • | •\nProibir o Copilot de resumir ou incluir dados que os usuários não têm permissões de extração em suas mensagens de resposta para os referidos usuários | • | • | •\nExcluir arquivos confidenciais que os usuários não têm permissão de visualização de serem processados pelo Copilot para os referidos usuários | • | • | •\nRotular e proteger o conteúdo do Microsoft 365, usado pelo Copilot | Office only | Manual | Automated\nDetecte violações de negócios ou código de conduta para prompts e respostas do Copilot | •\nImpedir o acesso do Copilot ao conteúdo criptografado com criptografia de chave dupla | •\nUse classificadores treináveis de aprendizado de máquina prontos para uso para identificar informações confidenciais e criar classificadores personalizados | •\nAmeaça\nProteçãot | Descoberta e avaliação de riscos em 400+ aplicativos de IA em uma organização | •\nCapacidade de bloquear ou sancionar o uso de qualquer aplicativo de IA descoberto na organização | •\nLicenças do Copilot",
+            "images": [
+                "extracted_images/NOVO/slide_5_img_17.png"
+            ]
+        },
+        {
+            "slide_number": 6,
+            "title": "",
+            "text": "Identificação do Ambiente\nMapear quem realmente vai usar o Copilot (áreas, funções, perfis)\nIdentificar quais departamentos (RH, Financeiro, Suporte, Comercial, Desenvolvimento etc.) terão benefício real\nValidar se a empresa tem os pré-requisitos técnicos (M365 E3/E5/Business)\nEntender a maturidade de uso de IA da empresa antes de recomendar um modelo de licença",
+            "images": [
+                "extracted_images/NOVO/slide_6_img_18.png",
+                "extracted_images/NOVO/slide_6_img_19.jpg"
+            ]
+        },
+        {
+            "slide_number": 7,
+            "title": "",
+            "text": "Microsoft 365 Copilot para usuários\nAssistente de IA dentro do Word, Excel, PowerPoint, Outlook e Teams\u000b\u000bCria textos, apresentações e análises automaticamente\u000b\u000bResume e‑mails, reuniões e documentos\u000b\u000bCopilot Chat para dúvidas, ideias e uso de agentes\u000b\u000bSegurança corporativa integrada ao Microsoft 365\nLicença: US$ 30 por usuário/mês",
+            "images": [
+                "extracted_images/NOVO/slide_7_img_20.png",
+                "extracted_images/NOVO/slide_7_img_21.jpg"
+            ]
+        },
+        {
+            "slide_number": 8,
+            "title": "",
+            "text": "Estudo de Caso - RUNAWAY\nImaginem a Andy Sachs na revista Runway.\u000b\u000bEla está se afogando em e‑mails da Miranda Priestly, precisa resumir relatórios de tendências com urgência, acompanhar reuniões que mudam de horário a cada cinco minutos e ainda encontrar arquivos perdidos no OneDrive do editorial.\nAndy não é desenvolvedora.\u000b\u000bEla não faz automação, não cria plugins, não mexe com APIs.\u000b\u000bEla é uma usuária de negócios, desesperada, precisando de IA dentro dos aplicativos que ela usa: Outlook, Word, Teams e PowerPoint.\nCOPISTILO",
+            "images": [
+                "extracted_images/NOVO/slide_8_img_22.jpg",
+                "extracted_images/NOVO/slide_8_img_23.jpg"
+            ]
+        },
+        {
+            "slide_number": 9,
+            "title": "",
+            "text": "Estudo de Caso - RUNAWAY\nPara salvar a Andy Sachs e permitir que ela:\u000bGerencie o Outlook com respostas inteligentes\u000b\u000bCrie rascunhos no Word\u000b\u000bResuma reuniões no Teams E trabalhe com contexto real dos dados da Runway...tudo ao mesmo tempo, qual é a solução ideal?\u000b\u000b\u000bA) Copilot Chat \u000b\u000bB) Copilot 365 para Usuários (Microsoft 365)\u000b\u000bC) Copilot Studio Pré‑pago\u000b\u000bD) Copilot Studio para usuário\nCOPISTILO",
+            "images": [
+                "extracted_images/NOVO/slide_9_img_24.jpg",
+                "extracted_images/NOVO/slide_9_img_25.jpg"
+            ]
+        },
+        {
+            "slide_number": 10,
+            "title": "",
+            "text": "Copilot 365 Cht Por Uso (PAYG)\n✔ Funciona como um serviço de consumo no Azure, sem licença fixa por usuário.\u000b\u000b✔ Permite que qualquer usuário habilitado use o Copilot Chat corporativo, mas sem os recursos completos dos aplicativos do Microsoft 365.",
+            "images": [
+                "extracted_images/NOVO/slide_10_img_26.png",
+                "extracted_images/NOVO/slide_10_img_27.jpg"
+            ]
+        },
+        {
+            "slide_number": 11,
+            "title": "",
+            "text": "Como Habilitar o Copilot 365 por uso?\nCriar uma assinatura Azure\nCriar um grupo de recursos no Azure\nIr no cobrança e Uso do Copilot\nAtivar e aplicar\n1\n2\n3\n4\nPágina inicial - Microsoft Azure",
+            "images": [
+                "extracted_images/NOVO/slide_11_img_28.png",
+                "extracted_images/NOVO/slide_11_img_29.png",
+                "extracted_images/NOVO/slide_11_img_30.png"
+            ]
+        },
+        {
+            "slide_number": 12,
+            "title": "",
+            "text": "Como Habilitar o Copilot Chat por uso?\nCobrança e uso - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/NOVO/slide_12_img_31.png",
+                "extracted_images/NOVO/slide_12_img_32.png",
+                "extracted_images/NOVO/slide_12_img_33.png"
+            ]
+        },
+        {
+            "slide_number": 13,
+            "title": "Configurar o PAYG para agentes do SharePoint no centro de administração do Microsoft 365\u000bConfigurar agentes do SharePoint para cobrança conforme o uso - SharePoint no Microsoft 365 | Microsoft Learn",
+            "text": "Configurar o PAYG para agentes do SharePoint no centro de administração do Microsoft 365\u000bConfigurar agentes do SharePoint para cobrança conforme o uso - SharePoint no Microsoft 365 | Microsoft Learn\nNo centro de administração do Microsoft 365,\nVá para o centro de administração do Microsoft 365, selecione Configurações e, em seguida, Configurações da organização e selecione serviços Pagos conforme o uso\nNa página Serviços pagos conforme o uso, em Cobrança, selecione agentes no SharePoint.\nNo painel Configurar cobrança e ativar serviços, na seção Configurar cobrança, em Assinatura do Azure, selecione a lista suspensa e siga as etapas para selecionar \u000ba assinatura, o grupo de recursos e a região do Azure. \u000b(A região determina onde sua ID de locatário e informações de uso, como nomes de sites, são armazenadas.)\nLeia e aceite os termos de serviço de cobrança conforme o uso.\nSelecione Salvar.",
+            "images": [
+                "extracted_images/NOVO/slide_13_img_34.png"
+            ]
+        },
+        {
+            "slide_number": 14,
+            "title": "Exibir informações de uso e cobrança\u000bExibir o uso e a cobrança do plano pago conforme o uso - Power Platform | Microsoft Learn\u000bConfigurar agentes do SharePoint para cobrança conforme o uso - SharePoint no Microsoft 365 | Microsoft Learn",
+            "text": "Exibir informações de uso e cobrança\u000bExibir o uso e a cobrança do plano pago conforme o uso - Power Platform | Microsoft Learn\u000bConfigurar agentes do SharePoint para cobrança conforme o uso - SharePoint no Microsoft 365 | Microsoft Learn\nPortal do Azure\nO Gerenciamento de custos do Azure pode filtrar e fornecer detalhes de cobrança por medidor e por recurso do Azure para agentes pagos conforme o uso.",
+            "images": [
+                "extracted_images/NOVO/slide_14_img_35.png",
+                "extracted_images/NOVO/slide_14_img_36.png"
+            ]
+        },
+        {
+            "slide_number": 15,
+            "title": "",
+            "text": "Estudo de Caso – OS INCRIVEIS\nImagine a rotina do Sr. Incrível: Ele passa 29 dias do mês esmagando robôs gigantes, frustrando vilões e salvando Metroville. O único momento em que ele se senta na frente de um computador é no \"Dia do Relatório Anual da Agência do Governo\" — aquele dia tenso em que precisa:\u000b\u000bEscrever relatórios burocráticos gigantes;\u000bUsar alguns agentes específicos para coletar informações;\u000bJustificar despesas da família para manter a pensão oficial de super-herói.\u000b\u000bQual a melhor forma de contratar o Copilot para o Sr. Incrível fazer esse relatório mensal sem estourar o orçamento?\u000b\u000bA) Comprar uma Licença Fixa Anual do Copilot M365 ($360/ano)\u000b\u000bB) Contratar uma estagiária\u000b\u000bC) Habilitar o \"M365 Copilot Chat via Consumo\" (Pay-as-you-go)\u000b\u000bD) Usar o Copilot Studio pré pago\nCOPINCRIVEL",
+            "images": [
+                "extracted_images/NOVO/slide_15_img_37.gif",
+                "extracted_images/NOVO/slide_15_img_38.jpg"
+            ]
+        },
+        {
+            "slide_number": 16,
+            "title": "",
+            "text": "Copilot Studio\nO Copilot Studio é a plataforma da Microsoft usada para criar, personalizar e publicar agentes de IA (bots/assistentes inteligentes) para empresas.Ele permite que você construa agentes conversacionais que respondem perguntas, executam ações, integram sistemas, automatizam processos e se conectam aos dados da organização.",
+            "images": [
+                "extracted_images/NOVO/slide_16_img_39.png",
+                "extracted_images/NOVO/slide_16_img_40.jpg"
+            ]
+        },
+        {
+            "slide_number": 17,
+            "title": "",
+            "text": "Dois tipos de licenças\n2 Tipos de licença Copilot Studio",
+            "images": [
+                "extracted_images/NOVO/slide_17_img_41.jpg",
+                "extracted_images/NOVO/slide_17_img_42.jpg"
+            ]
+        },
+        {
+            "slide_number": 18,
+            "title": "",
+            "text": "Dois tipos de licenças\nComo habilitar o Copilot Studio Pré Pago\nServiços de Compra do Marketplace - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/NOVO/slide_18_img_43.jpg",
+                "extracted_images/NOVO/slide_18_img_44.png",
+                "extracted_images/NOVO/slide_18_img_45.png",
+                "extracted_images/NOVO/slide_18_img_46.png"
+            ]
+        },
+        {
+            "slide_number": 19,
+            "title": "",
+            "text": "Dois tipos de licenças\nLimitações da Licença Copilot Studio (Trial)\nServiços de Compra do Marketplace - admin center do Microsoft 365\nVocê não pode publicar o agente\u000b\u000bA principal limitação do trial é que você pode criar e testar, mas não pode publicar o agente em canais (Teams, websites etc.).\u000b\u000b✔ Pode criar agentes\u000b✔ Pode testar no painel de teste\u000b❌ Não pode publicar\nDuração limitada do trial: 30 dias (com possível extensão)\u000bTrial dura 30 dias inicialmente\u000b\u000bPode ser estendido por mais 30 dias\u000b\u000b\u000bApós expirar, o agente continua funcionando por até 90 dias mesmo sem renovar\nQuotas reduzidas de uso (limitação técnica do ambiente trial)\u000bAmbientes Trial têm limites específicos de requisições:\u000b📌 100 RPM (requests per minute)\u000b📌 2.000 RPH (requests per hour)\u000bEssas quotas são menores do que ambientes pagos e servem como limitação indireta durante testes.\nPossível throttling (lentidão) em alto volume\u000b\u000bEmbora o trial permita sessões ilimitadas, bots com grande tráfego podem sofrer:\u000bLentidãoThrottle de requisições",
+            "images": [
+                "extracted_images/NOVO/slide_19_img_47.jpg",
+                "extracted_images/NOVO/slide_19_img_48.png"
+            ]
+        },
+        {
+            "slide_number": 20,
+            "title": "",
+            "text": "Estudo de Caso – MontrosSA\nPara atender a esse processo industrial constante e previsível de 25.000 interações mensais, a Roz quer fechar um contrato anual com preço travado, sem risco da fatura vir mais alta no mês que vem. Qual a contratação segura?\nA Monstros S.A. processa sustos (e agora risadas) em escala industrial. A Roz, que cuida do financeiro e da burocracia, sabe que a fábrica opera com exatamente 25.000 portas de crianças por mês. É uma meta fixa. Ela odeia contas variáveis. Ela precisa aprovar o orçamento anual hoje e não pode ter surpresas no cartão de crédito da empresa se o Sulley trabalhar 5 minutos a mais\nA) Comprar 100.000 licenças de Copilot M365 \u000b\u000bB) Contratar 5.000 elfos domésticos \u000b\u000bC) Copilot Studio via Azure (Pago Conforme o Uso) \u000b\u000bD) Copilot Pro – Pedir para cada bruxo usar sua conta pessoal\nA) Copilot Studio via Azure (Pago Conforme o Uso) \u000b\u000b\u000bB) Copilot para M365 \u000b\u000b\u000bC) Copilot Studio: Pacote de Capacidade (25.000 mensagens/mês Pré-pago)\u000b\u000b\u000bD) Contratar o Mike Wazowski – Ele esquece a papelada.",
+            "images": [
+                "extracted_images/NOVO/slide_20_img_49.png",
+                "extracted_images/NOVO/slide_20_img_50.jpg",
+                "extracted_images/NOVO/slide_20_img_51.jpg"
+            ]
+        },
+        {
+            "slide_number": 21,
+            "title": "",
+            "text": "Dois tipos de licenças\n2 Tipos de licença Copilot Studio",
+            "images": [
+                "extracted_images/NOVO/slide_21_img_52.jpg",
+                "extracted_images/NOVO/slide_21_img_53.jpg"
+            ]
+        },
+        {
+            "slide_number": 22,
+            "title": "",
+            "text": "Dois tipos de licenças\nComo habilitar Copilot Studio Por Uso\nPágina Inicial - Power Platform admin center",
+            "images": [
+                "extracted_images/NOVO/slide_22_img_54.jpg",
+                "extracted_images/NOVO/slide_22_img_55.png"
+            ]
+        },
+        {
+            "slide_number": 23,
+            "title": "",
+            "text": "Estudo de Caso – COPA QUADRIBOL\nO Ministério da Magia está organizando a Copa Mundial de Quadribol. Eles têm 200 funcionários internos (como o Arthur Weasley) trabalhando dia e noite. Mas, de repente, 100.000 bruxos do mundo todo chegam ao acampamento por apenas 1 semana. Todos esses 100 mil turistas querem usar um 'Chatbot Mágico' para perguntar: 'Onde é minha barraca?', 'Onde compro cerveja amanteigada?' e 'Qual o placar?'\nO Ministro da Magia precisa desse chatbot para atender os 100.000 torcedores apenas durante a semana da Copa. Qual a forma inteligente de pagar por essa IA?\nA) Comprar 100.000 licenças de Copilot M365 \u000b\u000bB) Contratar 5.000 elfos domésticos \u000b\u000bC) Copilot Studio via Azure (Pago Conforme o Uso) \u000b\u000bD) Copilot Studio Pré pago\nCOPOTTER",
+            "images": [
+                "extracted_images/NOVO/slide_23_img_56.png",
+                "extracted_images/NOVO/slide_23_img_57.jpg",
+                "extracted_images/NOVO/slide_23_img_58.jpg"
+            ]
+        },
+        {
+            "slide_number": 24,
+            "title": "",
+            "text": "Estudo de Caso – COPA QUADRIBOL\nO Ministério da Magia está organizando a Copa Mundial de Quadribol. Eles têm 200 funcionários internos (como o Arthur Weasley) trabalhando dia e noite. Mas, de repente, 100.000 bruxos do mundo todo chegam ao acampamento por apenas 1 semana. Todos esses 100 mil turistas querem usar um 'Chatbot Mágico' para perguntar: 'Onde é minha barraca?', 'Onde compro cerveja amanteigada?' e 'Qual o placar?'\nO Ministro da Magia precisa desse chatbot para atender os 100.000 torcedores apenas durante a semana da Copa. Qual a forma inteligente de pagar por essa IA?\nA) Comprar 100.000 licenças de Copilot M365 \u000b\u000bB) Contratar 5.000 elfos domésticos \u000b\u000bC) Copilot Studio via Azure (Pago Conforme o Uso) \u000b\u000bD) Copilot Studio Pré pago\nCOPOTTER",
+            "images": [
+                "extracted_images/NOVO/slide_24_img_59.png",
+                "extracted_images/NOVO/slide_24_img_60.jpg",
+                "extracted_images/NOVO/slide_24_img_61.jpg"
+            ]
+        },
+        {
+            "slide_number": 25,
+            "title": "",
+            "text": "Agent Builder",
+            "images": [
+                "extracted_images/NOVO/slide_25_img_62.png",
+                "extracted_images/NOVO/slide_25_img_63.png"
+            ]
+        },
+        {
+            "slide_number": 26,
+            "title": "",
+            "text": "Copilot Security",
+            "images": [
+                "extracted_images/NOVO/slide_26_img_64.png",
+                "extracted_images/NOVO/slide_26_img_65.png"
+            ]
+        },
+        {
+            "slide_number": 27,
+            "title": "",
+            "text": "Como Fazer Deploy de um Agente?\nCanais - Agente 1 | Microsoft Copilot Studio",
+            "images": [
+                "extracted_images/NOVO/slide_27_img_66.png",
+                "extracted_images/NOVO/slide_27_img_67.png",
+                "extracted_images/NOVO/slide_27_img_68.png"
+            ]
+        },
+        {
+            "slide_number": 28,
+            "title": "",
+            "text": "Recapitulação",
+            "images": [
+                "extracted_images/NOVO/slide_28_img_69.png",
+                "extracted_images/NOVO/slide_28_img_70.png",
+                "extracted_images/NOVO/slide_28_img_71.jpg",
+                "extracted_images/NOVO/slide_28_img_72.jpg",
+                "extracted_images/NOVO/slide_28_img_73.png",
+                "extracted_images/NOVO/slide_28_img_74.png",
+                "extracted_images/NOVO/slide_28_img_75.png",
+                "extracted_images/NOVO/slide_28_img_76.jpg",
+                "extracted_images/NOVO/slide_28_img_77.png",
+                "extracted_images/NOVO/slide_28_img_78.jpg",
+                "extracted_images/NOVO/slide_28_img_79.png",
+                "extracted_images/NOVO/slide_28_img_80.png",
+                "extracted_images/NOVO/slide_28_img_81.png",
+                "extracted_images/NOVO/slide_28_img_82.png"
+            ]
+        },
+        {
+            "slide_number": 29,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/NOVO/slide_29_img_83.png"
+            ]
+        },
+        {
+            "slide_number": 30,
+            "title": "OBRIGADO!!",
+            "text": "OBRIGADO!!",
+            "images": []
+        },
+        {
+            "slide_number": 31,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/NOVO/slide_31_img_84.png",
+                "extracted_images/NOVO/slide_31_img_85.png"
+            ]
+        },
+        {
+            "slide_number": 32,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/NOVO/slide_32_img_86.png",
+                "extracted_images/NOVO/slide_32_img_87.png"
+            ]
+        },
+        {
+            "slide_number": 33,
+            "title": "",
+            "text": "SUBTITLES\nH1 Demo text\nBody Text Demo\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nH2 Demo text\nH3 Demo text\nH4 Demo text\nH5 Demo text\nFONT\nInter 28pt",
+            "images": [
+                "extracted_images/NOVO/slide_33_img_88.png",
+                "extracted_images/NOVO/slide_33_img_89.png",
+                "extracted_images/NOVO/slide_33_img_90.png",
+                "extracted_images/NOVO/slide_33_img_91.png",
+                "extracted_images/NOVO/slide_33_img_92.png",
+                "extracted_images/NOVO/slide_33_img_93.png"
+            ]
+        },
+        {
+            "slide_number": 34,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/NOVO/slide_34_img_94.png",
+                "extracted_images/NOVO/slide_34_img_95.png",
+                "extracted_images/NOVO/slide_34_img_96.png",
+                "extracted_images/NOVO/slide_34_img_97.png",
+                "extracted_images/NOVO/slide_34_img_98.png",
+                "extracted_images/NOVO/slide_34_img_99.png",
+                "extracted_images/NOVO/slide_34_img_100.png",
+                "extracted_images/NOVO/slide_34_img_101.png",
+                "extracted_images/NOVO/slide_34_img_102.png",
+                "extracted_images/NOVO/slide_34_img_103.png",
+                "extracted_images/NOVO/slide_34_img_104.png",
+                "extracted_images/NOVO/slide_34_img_105.png",
+                "extracted_images/NOVO/slide_34_img_106.png",
+                "extracted_images/NOVO/slide_34_img_107.png",
+                "extracted_images/NOVO/slide_34_img_108.png",
+                "extracted_images/NOVO/slide_34_img_109.png",
+                "extracted_images/NOVO/slide_34_img_110.png",
+                "extracted_images/NOVO/slide_34_img_111.png",
+                "extracted_images/NOVO/slide_34_img_112.png",
+                "extracted_images/NOVO/slide_34_img_113.png",
+                "extracted_images/NOVO/slide_34_img_114.png",
+                "extracted_images/NOVO/slide_34_img_115.png",
+                "extracted_images/NOVO/slide_34_img_116.png",
+                "extracted_images/NOVO/slide_34_img_117.png"
+            ]
+        },
+        {
+            "slide_number": 35,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/NOVO/slide_35_img_118.png",
+                "extracted_images/NOVO/slide_35_img_119.png",
+                "extracted_images/NOVO/slide_35_img_120.png",
+                "extracted_images/NOVO/slide_35_img_121.png",
+                "extracted_images/NOVO/slide_35_img_122.png",
+                "extracted_images/NOVO/slide_35_img_123.png",
+                "extracted_images/NOVO/slide_35_img_124.png",
+                "extracted_images/NOVO/slide_35_img_125.png",
+                "extracted_images/NOVO/slide_35_img_126.png",
+                "extracted_images/NOVO/slide_35_img_127.png",
+                "extracted_images/NOVO/slide_35_img_128.png",
+                "extracted_images/NOVO/slide_35_img_129.png",
+                "extracted_images/NOVO/slide_35_img_130.png",
+                "extracted_images/NOVO/slide_35_img_131.png",
+                "extracted_images/NOVO/slide_35_img_132.png",
+                "extracted_images/NOVO/slide_35_img_133.png",
+                "extracted_images/NOVO/slide_35_img_134.png",
+                "extracted_images/NOVO/slide_35_img_135.png",
+                "extracted_images/NOVO/slide_35_img_136.png",
+                "extracted_images/NOVO/slide_35_img_137.png",
+                "extracted_images/NOVO/slide_35_img_138.png",
+                "extracted_images/NOVO/slide_35_img_139.png",
+                "extracted_images/NOVO/slide_35_img_140.png",
+                "extracted_images/NOVO/slide_35_img_141.png",
+                "extracted_images/NOVO/slide_35_img_142.png",
+                "extracted_images/NOVO/slide_35_img_143.png",
+                "extracted_images/NOVO/slide_35_img_144.png"
+            ]
+        },
+        {
+            "slide_number": 36,
+            "title": "",
+            "text": "Ícones",
+            "images": []
+        },
+        {
+            "slide_number": 37,
+            "title": "",
+            "text": "Ícones",
+            "images": []
+        },
+        {
+            "slide_number": 38,
+            "title": "",
+            "text": "",
+            "images": []
+        }
+    ],
+    "Template Apresentação com Copilot - Bizapp 2026.pptx": [
+        {
+            "slide_number": 1,
+            "title": "",
+            "text": "IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots\nNovembro 2025",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_0.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_1.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_2.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_3.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_4.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_5.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_6.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_7.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_8.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_9.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_10.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_1_img_11.png"
+            ]
+        },
+        {
+            "slide_number": 2,
+            "title": "",
+            "text": "IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots\nNovembro 2025",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_2_img_12.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_2_img_13.png"
+            ]
+        },
+        {
+            "slide_number": 3,
+            "title": "",
+            "text": "IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots\nNovembro 2025",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_3_img_14.png"
+            ]
+        },
+        {
+            "slide_number": 4,
+            "title": "",
+            "text": "IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots\nNovembro 2025",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_4_img_15.png"
+            ]
+        },
+        {
+            "slide_number": 5,
+            "title": "",
+            "text": "IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots\nNovembro 2025",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_5_img_16.png"
+            ]
+        },
+        {
+            "slide_number": 6,
+            "title": "",
+            "text": "Segurança\nIA responsável\nGovernança e monitoramento\nImplantação e administração\nObjetivo do Treinamento",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_6_img_17.png"
+            ]
+        },
+        {
+            "slide_number": 7,
+            "title": "",
+            "text": "Implantação e administração",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_7_img_18.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_7_img_19.png"
+            ]
+        },
+        {
+            "slide_number": 8,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_8_img_20.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_8_img_21.gif"
+            ]
+        },
+        {
+            "slide_number": 9,
+            "title": "",
+            "text": "IA com Responsabilidade: Segurança, Governança e Eficiência na Era dos Copilots\nNovembro 2025",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_9_img_22.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_9_img_23.png"
+            ]
+        },
+        {
+            "slide_number": 10,
+            "title": "",
+            "text": "TIME TO 100M USERS\n(years)\n20\n15\n10\n5\n3\n1\nSmart Phones\n16 years\nInternet\n7 years\nInstagram\n2.5 years\nTikTok\n<9 months\nChatGPT\n2 months\nE pode ajudar...\nLiberar a criatividade\nDesbloquear a produtividade\nHabilidades de nível superior\nAvanço da IA",
+            "images": []
+        },
+        {
+            "slide_number": 11,
+            "title": "",
+            "text": "Se uma inteligência artificial pudesse acessar qualquer dado da empresa, você saberia exatamente quais riscos isso traria?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_11_img_24.png"
+            ]
+        },
+        {
+            "slide_number": 12,
+            "title": "",
+            "text": "Vazamentos de dados: a ameaça silenciosa das IAs genéricas na empresas",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_12_img_25.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_12_img_26.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_12_img_27.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_12_img_28.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_12_img_29.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_12_img_30.png"
+            ]
+        },
+        {
+            "slide_number": 13,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_13_img_31.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_13_img_32.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_13_img_33.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_13_img_34.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_13_img_35.png"
+            ]
+        },
+        {
+            "slide_number": 14,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_14_img_36.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_14_img_37.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_14_img_38.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_14_img_39.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_14_img_40.png"
+            ]
+        },
+        {
+            "slide_number": 15,
+            "title": "",
+            "text": "A segurança vem antes do prompt",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_15_img_41.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_15_img_42.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_15_img_43.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_15_img_44.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_15_img_45.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_15_img_46.png"
+            ]
+        },
+        {
+            "slide_number": 16,
+            "title": "",
+            "text": "A segurança vem antes do prompt",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_16_img_47.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_16_img_48.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_16_img_49.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_16_img_50.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_16_img_51.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_16_img_52.png"
+            ]
+        },
+        {
+            "slide_number": 17,
+            "title": "",
+            "text": "1\nOs prompts do usuário do Microsoft 365 Apps são enviados para o Copilot\n2\nO Copilot acessa o Graph e o Índice Semântico para pré-processamento\n3\n3\nCopilot sends modified prompt to Large Language Model\nRAI\nA IA responsável é executada no prompt de entrada e nos resultados de saída\nAzure OpenAI\nA instância do OpenAI do Azure é mantida pela Microsoft. A OpenAI não tem acesso aos dados ou ao modelo.\nPrincípios RAI da Microsoft: Justiça, Confiabilidade e Segurança, Privacidade e Segurança, Inclusão, Transparência, Responsabilidade\n4\nCopilot recebe resposta LLM\n5\nO Copilot acessa o Graph e o Índice Semântico para pós-processamento\n6\nO Copilot envia a resposta e o comando do aplicativo de volta para o Microsoft 365 Apps\nSeu contexto e conteúdo:\nemails, arquivos, reuniões, chats do Teams, calendários e contatos\nFundamentos do Copilot",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_53.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_54.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_55.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_56.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_57.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_58.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_59.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_60.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_61.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_62.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_63.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_64.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_65.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_66.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_67.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_68.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_69.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_70.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_71.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_17_img_72.png"
+            ]
+        },
+        {
+            "slide_number": 18,
+            "title": "",
+            "text": "Cenário | O365 E3 | M365 E3 | M365 E5\nGerenciamento de identidade e acesso | Faça login no Microsoft 365 Copilot com uma única identidade | • | • | •\nImpor MFA ao acessar o Microsoft 365 para usar o Copilot | Basic MFA | • | •\nHabilitar a redefinição, alteração e desbloqueio de senha do usuário final ao acessar o Microsoft 365 | Cloud only | • | •\nImplemente políticas de Acesso Condicional com base na identidade, dispositivo e localização ao acessar o Microsoft 365 para usar o Copilot | • | •\nHabilite a imposição de políticas de acesso quase em tempo real, avalie eventos críticos e revogue imediatamente o acesso ao Microsoft 365 | • | •\nControlar o acesso por aplicativos de nuvem (Microsoft 365 e terceiros) | •\nRevise quem tem acesso ao conteúdo no Microsoft 365 – Copilot – para reduzir o compartilhamento excessivo | •\nExigir aprovação just-in-time e just-in-time para funções de administrador que podem gerenciar o acesso ao aplicativo Copilot | •\nGerenciamento de endpoints | Envie/implante os aplicativos do Microsoft 365 em dispositivos e conceda acesso ao Copilot nesses aplicativos | • | •\nGerenciar atualizações de aplicativos do Microsoft 365 | • | •\nRestrinja o uso dos aplicativos do Microsoft 365 e do Teams, bem como do Copilot nesses aplicativos, em dispositivos pessoais | • | •\nImpedir salvar arquivos – incluindo aqueles gerados pelo Copilot – em aplicativos desprotegidos | • | •\nLimpe todo o conteúdo de trabalho, incluindo o conteúdo gerado pelo Copilot, se um dispositivo for perdido | • | •\nRevogar o acesso de trabalho em dispositivos não compatíveis | • | •\nSegurança de dados e \nconformidade | Pesquise dados gerados pelo Copilot por conteúdo, pesquisa por palavra-chave, aplique retenção legal e exporte os resultados da pesquisa; investigar incidentes relacionados ao Copilot e responder a litígios | Standard | Standard | Premium\nLogs de auditoria para interações do Copilot | Standard | Standard | Premium\nApply a retention policy for Copilot interactions | Standard | Standard | Automated\nPolíticas de Prevenção contra Perda de Dados para proteger dados confidenciais, gerados pelo Copilot e salvos em locais do Microsoft 365, contra exfiltração | Files & email | Files & email | + Endpoint, Teams\nHerdar rótulos de confidencialidade e citar rótulo de confidencialidade na saída e nas referências no Copilot | • | • | •\nProibir o Copilot de resumir ou incluir dados que os usuários não têm permissões de extração em suas mensagens de resposta para os referidos usuários | • | • | •\nExcluir arquivos confidenciais que os usuários não têm permissão de visualização de serem processados pelo Copilot para os referidos usuários | • | • | •\nRotular e proteger o conteúdo do Microsoft 365, usado pelo Copilot | Office only | Manual | Automated\nDetecte violações de negócios ou código de conduta para prompts e respostas do Copilot | •\nImpedir o acesso do Copilot ao conteúdo criptografado com criptografia de chave dupla | •\nUse classificadores treináveis de aprendizado de máquina prontos para uso para identificar informações confidenciais e criar classificadores personalizados | •\nAmeaça\nProteçãot | Descoberta e avaliação de riscos em 400+ aplicativos de IA em uma organização | •\nCapacidade de bloquear ou sancionar o uso de qualquer aplicativo de IA descoberto na organização | •\nLicenças do Copilot",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_18_img_73.png"
+            ]
+        },
+        {
+            "slide_number": 19,
+            "title": "",
+            "text": "O que é Copilot Chat vs Microsoft 365 Copilot?\nCopilot Chat\nIA básica para toda a organização\nChat gratuito com GPT‑4o\nAgentes acessados via chat (pagos por consumo)\nControles de TI e proteção de dados corporativos\nMicrosoft 365 Copilot\nTudo do Copilot Chat + integração com dados do tenant\nFunciona dentro dos apps (Word, Excel, Outlook, Teams etc.)\nRecursos avançados: SharePoint Advanced Management, Copilot Analytics, Viva Insights\nLicença: US$ 30 por usuário/mês",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_19_img_74.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_19_img_75.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_19_img_76.png"
+            ]
+        },
+        {
+            "slide_number": 20,
+            "title": "",
+            "text": "Aonde estão meus dados?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_20_img_77.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_20_img_78.png"
+            ]
+        },
+        {
+            "slide_number": 21,
+            "title": "Responsabilidades compartilhadas de segurança para uso de IA para Microsoft Copilot para Microsoft 365",
+            "text": "Responsabilidades compartilhadas de segurança para uso de IA para Microsoft Copilot para Microsoft 365\nShared responsibility\nAcesso a aplicativos de IA\u000bConfigure a política de controle de acesso, aproveitando as soluções de gerenciamento de identidade e acesso\nProteja e controle os dados inseridos e criados por aplicativos de IA\u000bAplique controles de segurança e conformidade de dados em dados em interações de IA.\nResponsabilidade do usuário pelo uso da IA\u000bImplemente e opere o treinamento de segurança de IA em toda a organização\nPrivacidade e conformidade\u000bConformidade com nossos compromissos existentes de privacidade, segurança e conformidade com clientes comerciais do Microsoft 365, incluindo a LGPD.\nLimite de serviço\u000bPrompts, respostas e dados acessados por meio do Microsoft Graph não são usados para treinar LLMs básicos, incluindo aqueles usados pelo Microsoft Copilot para Microsoft 365.\nIA responsável\u000bNa Microsoft, somos guiados por nossos princípios de IA e Padrão de IA Responsável – justiça, confiabilidade e segurança, privacidade e proteção, inclusão, transparência e responsabilidade",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_21_img_79.png"
+            ]
+        },
+        {
+            "slide_number": 22,
+            "title": "4 Pilares\u000bDa Segurança ao Copilot",
+            "text": "4 Pilares\u000bDa Segurança ao Copilot\n1\nGerenciar usuários com privilégios e riscos\nMicrosoft Entra ID\n2\nReduza o risco do dispositivo\nMicrosoft Intune\n3\nEvite a superexposição de dados\nMicrosoft Purview Information Protection\n4\nDescubra e controle o uso de aplicativos de IA\nMicrosoft Defender for Cloud Apps",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_22_img_80.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_22_img_81.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_22_img_82.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_22_img_83.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_22_img_84.png"
+            ]
+        },
+        {
+            "slide_number": 23,
+            "title": "Controle o acesso ao Copilot\u000bMicrosoft Entra ID",
+            "text": "2\nReduza o risco do dispositivo\u000bcom gerenciamento de endpoint\nMicrosoft Intune\nMicrosoft 365\nCopilot\nControle o acesso ao Copilot\u000bMicrosoft Entra ID\nUsuários e dispositivos\n1\nGerenciar usuários com privilégios e riscos \ncom gerenciamento de identidade e acesso\nMicrosoft Entra ID\n\nFaça logon no Microsoft 365 com uma identidade corporativa única e gerenciada.\n\nAvalie as tentativas de login com base na associação do usuário ou grupo, localização do IP, estado do dispositivo, aplicativo e detecção de risco.\n\nDecida o nível de acesso com políticas de Acesso Condicional.\nAllow\naccess\nRequire\nMFA\nLimit\naccess\nPassword\nreset\nMonitor\naccess\n\nMonitore eventos críticos e emita tokens de acesso que podem ser revogados imediatamente.",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_23_img_85.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_23_img_86.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_23_img_87.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_23_img_88.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_23_img_89.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_23_img_90.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_23_img_91.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_23_img_92.jpg",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_23_img_93.png"
+            ]
+        },
+        {
+            "slide_number": 24,
+            "title": "Gerenciar Dispositivos\u000bMicrosoft Intune",
+            "text": "1\nGerenciar usuários com privilégios e riscoscom gerenciamento de identidade e acesso\nMicrosoft Entra ID\nGerenciar Dispositivos\u000bMicrosoft Intune\nUsers and Devices\n2\nReduza o risco do dispositivo\u000bcom gerenciamento de endpoint\nMicrosoft Intune\nMicrosoft 365\nCopilot\n\nVerifique se os aplicativos do Microsoft 365 estão instalados com segurança no dispositivo do usuário e atualizados.\n\nLimitar o uso de aplicativos de trabalho, incluindo o Copilot, em dispositivos pessoais\n\nImplemente políticas de proteção de aplicativo para limitar as ações que os usuários podem executar em dispositivos:\nSalve arquivos gerados em aplicativos não seguros\nRestringir copiar e colar a aplicativos que não são de trabalho\n\nApague todo o conteúdo de trabalho se o dispositivo for perdido ou desassociado da empresa ou do usuário.",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_24_img_94.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_24_img_95.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_24_img_96.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_24_img_97.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_24_img_98.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_24_img_99.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_24_img_100.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_24_img_101.jpg",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_24_img_102.png"
+            ]
+        },
+        {
+            "slide_number": 25,
+            "title": "",
+            "text": "Pergunta 1\nQual a primeira coisa que precisamos fazer para dar segurança ao Copilot?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_25_img_103.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_25_img_104.png"
+            ]
+        },
+        {
+            "slide_number": 26,
+            "title": "",
+            "text": "A melhor maneira de manter o Copilot seguro é garantir que o ambiente onde ele funciona também seja seguro",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_26_img_105.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_26_img_106.png"
+            ]
+        },
+        {
+            "slide_number": 27,
+            "title": "",
+            "text": "Segurança para avaliação de IA",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_27_img_107.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_27_img_108.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_27_img_109.png"
+            ]
+        },
+        {
+            "slide_number": 28,
+            "title": "",
+            "text": "Como proteger o seu ambiente?\u000b5 passos para manter seu ambiente Microsoft Seguro\nMicrosoft 365 admin Center\nEntra ID\nSharepoint\nMicrosoft Intune\nMicrosoft Purview\n1\n2\n3\n4\n5\nIdentificar licenças do Copilot.\nMonitorar grupos e funções de segurança.\nGerenciar identidades, aplicar políticas de acesso condicional e revisar funções\nAvaliar permissões de acesso no SharePoint.\nRefinar documentações e aplicar rótulos de sensibilidade via Purview.\nProteger dispositivos dos colaboradores que utilizam Copilot (políticas de conformidade, criptografia, proteção de apps).\nProteger dispositivos dos colaboradores que utilizam Copilot (políticas de conformidade, criptografia, proteção de apps).",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_28_img_110.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_28_img_111.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_28_img_112.png"
+            ]
+        },
+        {
+            "slide_number": 29,
+            "title": "",
+            "text": "Microsoft 365 admin Center\nVerificar explicitamente\nO Zero Trust pressupõe que nenhum usuário ou dispositivo deve ser automaticamente confiável com base apenas em sua localização ou credenciais de rede. Em vez disso, cada usuário e dispositivo deve ser autenticado e autorizado individualmente antes de acessar quaisquer recursos ou serviços.\nZero Trust\n1\nAcesso com privilégios mínimos\nOs utilizadores e os dispositivos só devem ter o nível mínimo de acesso necessário para executar as suas tarefas ou funções específicas. Este princípio garante que, mesmo que uma entidade esteja comprometida, o dano potencial e o movimento lateral dentro da rede são limitados.",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_29_img_113.png"
+            ]
+        },
+        {
+            "slide_number": 30,
+            "title": "Criar um grupo de segurança Copilot 365 ",
+            "text": "Criar um grupo de segurança Copilot 365\nMicrosoft 365 admin Center\n1\nAtribua Licença\u000bCopilot ao Grupo",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_30_img_114.png"
+            ]
+        },
+        {
+            "slide_number": 31,
+            "title": "Criar um grupo de segurança Copilot 365 ",
+            "text": "Criar um grupo de segurança Copilot 365\nMicrosoft 365 admin Center\n1\nAtribua Licença\u000bCopilot ao Grupo",
+            "images": []
+        },
+        {
+            "slide_number": 32,
+            "title": "No Entra acessar e criar uma nova politica de acesso condicional",
+            "text": "No Entra acessar e criar uma nova politica de acesso condicional\nMicrosoft Admin\nEssa política vai permitir aplicar controles baseados em identidade, dispositivo e contexto, garantindo que apenas usuários e dispositivos confiáveis tenham acesso aos recursos corporativos.\nObjetivo da política\nExemplos de condições (localização, dispositivo, risco)\nAções (bloquear, exigir MFA, exigir dispositivo gerenciado)\n2",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_32_img_115.png"
+            ]
+        },
+        {
+            "slide_number": 33,
+            "title": "",
+            "text": "2\nMicrosoft Entra ID",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_33_img_116.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_33_img_117.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_33_img_118.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_33_img_119.png"
+            ]
+        },
+        {
+            "slide_number": 34,
+            "title": "",
+            "text": "3\nMicrosoft Entra ID",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_34_img_120.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_34_img_121.png"
+            ]
+        },
+        {
+            "slide_number": 35,
+            "title": "",
+            "text": "4\nMicrosoft Sharepoint\nCopilot respeita suas permissões: mostra apenas o que você já poderia acessar\nAcessos e permissões no Sharepoint\nO Copilot não cria novos privilégios de acesso. Ele só consegue mostrar informações que o usuário já tem permissão para ver no Microsoft 365.\u000bSe alguém vê dados sensíveis, como salários, isso significa que essas informações já estavam acessíveis para essa pessoa antes, seja via SharePoint, OneDrive ou outro serviço.\u000bO Copilot apenas facilita a busca e a interação com esses dados, mas respeita todas as permissões e políticas existentes.",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_35_img_122.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_35_img_123.png"
+            ]
+        },
+        {
+            "slide_number": 36,
+            "title": "",
+            "text": "4\nMicrosoft Sharepoint\nAcessos e permissões no Sharepoint",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_36_img_124.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_36_img_125.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_36_img_126.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_36_img_127.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_36_img_128.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_36_img_129.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_36_img_130.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_36_img_131.png"
+            ]
+        },
+        {
+            "slide_number": 37,
+            "title": "",
+            "text": "4\nMicrosoft Sharepoint",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_37_img_132.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_37_img_133.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_37_img_134.png"
+            ]
+        },
+        {
+            "slide_number": 38,
+            "title": "",
+            "text": "4\nMicrosoft Sharepoint",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_38_img_135.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_38_img_136.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_38_img_137.png"
+            ]
+        },
+        {
+            "slide_number": 39,
+            "title": "",
+            "text": "4\nMicrosoft Sharepoint",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_39_img_138.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_39_img_139.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_39_img_140.png"
+            ]
+        },
+        {
+            "slide_number": 40,
+            "title": "",
+            "text": "5\nMicrosoft Sharepoint\nRestricted SharePoint Search\nEle serve para limitar o escopo da pesquisa do Copilot (e do Microsoft Search) dentro do SharePoint. Quando ativado, ele impede que o Copilot faça buscas em todos os sites aos quais o usuário tem acesso e restringe a pesquisa apenas a sites específicos definidos pelo administrador.\nPor que isso existe?\nMesmo que o Copilot respeite as permissões, em ambientes com muitos sites e dados sensíveis, pode ser interessante reduzir a superfície de busca para evitar que informações críticas apareçam em respostas.\nÉ uma camada extra de governança para organizações que querem controlar onde o Copilot pode buscar conteúdo.\nFiltragem de Sites",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_40_img_141.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_40_img_142.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_40_img_143.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_40_img_144.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_40_img_145.png"
+            ]
+        },
+        {
+            "slide_number": 41,
+            "title": "Criar um grupo de segurança Copilot 365 ",
+            "text": "Criar um grupo de segurança Copilot 365\nMicrosoft 365 admin Center\nGestão centralizada\nFacilita o controle de quem tem acesso ao Copilot, evitando atribuições manuais e dispersas.\nGovernança e segurança\nPermite aplicar políticas específicas (MFA, acesso condicional, Zero Trust) diretamente ao grupo no Microsoft Entra ID.\nEscalabilidade\nAo adicionar ou remover usuários do grupo, as licenças são atribuídas ou revogadas automaticamente, sem necessidade de ajustes individuais.\nMonitoramento simplificado\nFacilita auditoria e relatórios no Admin Center, garantindo visibilidade sobre uso e conformidade.\nIntegração com políticas de dados\nPermite vincular controles de Purview e Intune para proteger dados e dispositivos usados pelo Copilot.\n1\nAtribua Licença\u000bCopilot ao Grupo",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_41_img_146.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_41_img_147.png"
+            ]
+        },
+        {
+            "slide_number": 42,
+            "title": "",
+            "text": "5\nMicrosoft Sharepoint\nCompartilhamento Sharepoint\nManage sharing settings for SharePoint and OneDrive in Microsoft 365 - SharePoint in Microsoft 365 | Microsoft Learn",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_42_img_148.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_42_img_149.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_42_img_150.png"
+            ]
+        },
+        {
+            "slide_number": 43,
+            "title": "",
+            "text": "5\nMicrosoft Sharepoint\nRestricted SharePoint Search\nQuando utilizar?\nCenários com dados altamente sensíveis espalhados por vários sites.\nEmpresas que querem que o Copilot trabalhe apenas com conteúdo corporativo oficial (ex.: sites de projetos, políticas, treinamentos), evitando dados pessoais ou não estruturados.",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_43_img_151.png"
+            ]
+        },
+        {
+            "slide_number": 44,
+            "title": "",
+            "text": "5\nRestricted SharePoint Search\nComo faço para ativar?\nMicrosoft Sharepoint\nNecessário Função administrator do Sharepoint ou mais elevada",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_44_img_152.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_44_img_153.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_44_img_154.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_44_img_155.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_44_img_156.png"
+            ]
+        },
+        {
+            "slide_number": 45,
+            "title": "",
+            "text": "5\nPermitir que somente sites específicos não sejam encontrados dentro da Pesquisa\u000bComo faço para ativar?\nMicrosoft Sharepoint\nNecessário Função administrator do Sharepoint ou mais elevada",
+            "images": []
+        },
+        {
+            "slide_number": 46,
+            "title": "",
+            "text": "5\nPermitir que somente sites específicos não sejam encontrados dentro da Pesquisa\u000bComo faço para ativar?\nMicrosoft Sharepoint\nNecessário Função administrator do Sharepoint ou mais elevada",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_46_img_157.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_46_img_158.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_46_img_159.png"
+            ]
+        },
+        {
+            "slide_number": 47,
+            "title": "",
+            "text": "6\nComo proteger os Computadores para o Copilot\nMicrosoft Intune\nO que é o Intune?\nMicrosoft Intune é uma solução de gerenciamento de dispositivos e aplicativos baseada na nuvem",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_47_img_160.png"
+            ]
+        },
+        {
+            "slide_number": 48,
+            "title": "",
+            "text": "6\nAplicativos do 365 Dentro da Base de segurança\nMicrosoft Intune\nBases de referencia de segurança sugeridas pela própria Microsoft\nÉ importante inserir os computadores dentro de uma politica de base de segurança sugeridas pela própria Microsoft",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_48_img_161.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_48_img_162.png"
+            ]
+        },
+        {
+            "slide_number": 49,
+            "title": "",
+            "text": "6\nAplicativos do 365 Dentro da Base de segurança\nMicrosoft Intune\nComo inserir?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_163.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_164.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_165.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_166.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_167.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_49_img_168.png"
+            ]
+        },
+        {
+            "slide_number": 50,
+            "title": "",
+            "text": "6\nAplicativos do 365 Dentro da Base de segurança\nMicrosoft Intune\nComo inserir?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_169.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_170.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_171.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_172.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_173.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_50_img_174.png"
+            ]
+        },
+        {
+            "slide_number": 51,
+            "title": "",
+            "text": "6\nMicrosoft Purview\nMicrosoft Intune\nO que é?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_51_img_175.png"
+            ]
+        },
+        {
+            "slide_number": 52,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 53,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 54,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 55,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 56,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 57,
+            "title": "",
+            "text": "Processo | 7 h | 8h | 9h | 10h | 11h | 12h | 13h | 14h | 15h | 16h | 17h | 18h\nAtividade 1\nAtividade 2\nAtividade 3\nAtividade 4\nAtividade 5\nAtividade 6\nOBJETIVO\nAção1\nAção2\nAção 3\nAção 4\nAção 5\nAção 6",
+            "images": []
+        },
+        {
+            "slide_number": 58,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 59,
+            "title": "Risus Tellus Amet Malesuada",
+            "text": "Risus Tellus Amet Malesuada\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.\nJusto Sem\nMaecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis.\nLigula Mattis Elit\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit.\nVenenatis Purus\nAenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada.",
+            "images": []
+        },
+        {
+            "slide_number": 60,
+            "title": "Amet Vulputate Elit",
+            "text": "Amet Vulputate Elit\nDonec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.\nIpsum Cras\nMaecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia.\nAmet Dapibus Malesuada\nCras justo odio, dapibus ac facilisis in, egestas eget quam.\nPorta Cursus Mollis Dapibus\nCras justo odio, dapibus ac facilisis in, egestas eget quam.\nRisus Cras Condimentum Dapibus Ornare\nNullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.\nDonec sed odio dui. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_60_img_176.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_60_img_177.png"
+            ]
+        },
+        {
+            "slide_number": 61,
+            "title": "Vivamus sagittis lacus vel augue laoreet",
+            "text": "Vivamus sagittis lacus vel augue laoreet\nAenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.",
+            "images": []
+        },
+        {
+            "slide_number": 62,
+            "title": "",
+            "text": "ITEM | ITEM | ITEM | ITEM | ITEM\n000 | 000 | 000 | 000 | 000",
+            "images": []
+        },
+        {
+            "slide_number": 63,
+            "title": "",
+            "text": "ITEM | ITEM | ITEM | ITEM\n000 | 000 | 000 | 000",
+            "images": []
+        },
+        {
+            "slide_number": 64,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 65,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 66,
+            "title": "Obrigado!!",
+            "text": "Obrigado!!",
+            "images": []
+        },
+        {
+            "slide_number": 67,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 68,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 69,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 70,
+            "title": "",
+            "text": "Cargo",
+            "images": []
+        },
+        {
+            "slide_number": 71,
+            "title": "Integer posuere erat a ante.",
+            "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.\nNullam id dolor id nibh ultricies vehicula ut id elit.\nVivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.\nNullam id dolor id nibh ultricies vehicula ut id elit.\nVivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.\nNullam id dolor id nibh ultricies vehicula ut id elit.\nVivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.\nNullam id dolor id nibh ultricies vehicula ut id elit.\nInteger posuere erat a ante.",
+            "images": []
+        },
+        {
+            "slide_number": 72,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 73,
+            "title": "Integer posuere erat a ante.",
+            "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.\nNullam id dolor id nibh ultricies vehicula ut id elit.\nVivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.\nNullam id dolor id nibh ultricies vehicula ut id elit.\nVivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.\nNullam id dolor id nibh ultricies vehicula ut id elit.\nVivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.\nNullam id dolor id nibh ultricies vehicula ut id elit.\nInteger posuere erat a ante.",
+            "images": []
+        },
+        {
+            "slide_number": 74,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 75,
+            "title": "",
+            "text": "Título da seção\nbem aqui",
+            "images": []
+        },
+        {
+            "slide_number": 76,
+            "title": "",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.\nMaecenas faucibus \u000bmollis interdum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.\nMaecenas faucibus \u000bmollis interdum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.\nMaecenas faucibus \u000bmollis interdum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.\nMaecenas faucibus \u000bmollis interdum.",
+            "images": []
+        },
+        {
+            "slide_number": 77,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 78,
+            "title": "",
+            "text": "",
+            "images": []
+        },
+        {
+            "slide_number": 79,
+            "title": "",
+            "text": "O QUE NÓS IMAGINAMOS,\nA TECNOLOGIA REALIZA\n#PURPECIRCLE\nSoluções que modernizam e transformam as operações de negócios das empresas em busca de torná-las mais produtivas, competitivas e obterem diferencial no mercado de atuação.\nTecnologia, conhecimento e coletividade. ​Com um time que acredita nas tecnologias escolhidas, é apaixonado pelo que faz e tem vontade de trilhar os desafios junto com o cliente.\nO ser humano tem uma enorme\ncapacidade de reimaginar e a tecnologia é a ferramenta que habilita as novas possibilidades. Sempre teremos um novo objetivo e um novo desafio a explorar \u000be este é o combustível que nos mantém crescendo: a perspectiva de inovação.\nPor que?\nO que?\nComo?",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_79_img_178.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_79_img_179.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_79_img_180.png"
+            ]
+        },
+        {
+            "slide_number": 80,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_80_img_181.jpg"
+            ]
+        },
+        {
+            "slide_number": 81,
+            "title": "",
+            "text": "Atuando no mercado há mais de 10 anos\nSOBRE NÓS\nClientes\n+600.000\nUsuários ativos\n+300\nProjetos entregues\n+80\nProfissionais especializados",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_81_img_182.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_81_img_183.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_81_img_184.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_81_img_185.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_81_img_186.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_81_img_187.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_81_img_188.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_81_img_189.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_81_img_190.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_81_img_191.png"
+            ]
+        },
+        {
+            "slide_number": 82,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_82_img_192.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_82_img_193.png"
+            ]
+        },
+        {
+            "slide_number": 83,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_83_img_194.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_83_img_195.png"
+            ]
+        },
+        {
+            "slide_number": 84,
+            "title": "",
+            "text": "SUBTITLES\nH1 Demo text\nBody Text Demo\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nH2 Demo text\nH3 Demo text\nH4 Demo text\nH5 Demo text\nFONT\nInter 28pt",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_84_img_196.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_84_img_197.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_84_img_198.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_84_img_199.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_84_img_200.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_84_img_201.png"
+            ]
+        },
+        {
+            "slide_number": 85,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_202.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_203.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_204.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_205.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_206.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_207.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_208.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_209.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_210.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_211.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_212.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_213.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_214.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_215.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_216.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_217.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_218.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_219.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_220.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_221.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_222.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_223.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_224.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_85_img_225.png"
+            ]
+        },
+        {
+            "slide_number": 86,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_226.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_227.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_228.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_229.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_230.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_231.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_232.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_233.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_234.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_235.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_236.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_237.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_238.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_239.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_240.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_241.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_242.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_243.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_244.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_245.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_246.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_247.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_248.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_249.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_250.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_251.png",
+                "extracted_images/Template Apresentação com Copilot - Bizapp 2026/slide_86_img_252.png"
+            ]
+        },
+        {
+            "slide_number": 87,
+            "title": "",
+            "text": "Ícones",
+            "images": []
+        },
+        {
+            "slide_number": 88,
+            "title": "",
+            "text": "Ícones",
+            "images": []
+        },
+        {
+            "slide_number": 89,
+            "title": "",
+            "text": "",
+            "images": []
+        }
+    ],
+    "Treinamento 2.pptx": [
+        {
+            "slide_number": 1,
+            "title": "",
+            "text": "Treinamento M365 Copilot – Adoção, Dashboards e Governança\nDezembro 2025",
+            "images": [
+                "extracted_images/Treinamento 2/slide_1_img_0.png",
+                "extracted_images/Treinamento 2/slide_1_img_1.png",
+                "extracted_images/Treinamento 2/slide_1_img_2.png",
+                "extracted_images/Treinamento 2/slide_1_img_3.png",
+                "extracted_images/Treinamento 2/slide_1_img_4.png",
+                "extracted_images/Treinamento 2/slide_1_img_5.png",
+                "extracted_images/Treinamento 2/slide_1_img_6.png",
+                "extracted_images/Treinamento 2/slide_1_img_7.png",
+                "extracted_images/Treinamento 2/slide_1_img_8.png",
+                "extracted_images/Treinamento 2/slide_1_img_9.png",
+                "extracted_images/Treinamento 2/slide_1_img_10.png",
+                "extracted_images/Treinamento 2/slide_1_img_11.png"
+            ]
+        },
+        {
+            "slide_number": 2,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Treinamento 2/slide_2_img_12.png"
+            ]
+        },
+        {
+            "slide_number": 3,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Treinamento 2/slide_3_img_13.png"
+            ]
+        },
+        {
+            "slide_number": 4,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Treinamento 2/slide_4_img_14.png"
+            ]
+        },
+        {
+            "slide_number": 5,
+            "title": "",
+            "text": "Resumo Copilot",
+            "images": [
+                "extracted_images/Treinamento 2/slide_5_img_15.png",
+                "extracted_images/Treinamento 2/slide_5_img_16.png"
+            ]
+        },
+        {
+            "slide_number": 6,
+            "title": "",
+            "text": "Resumo Copilot",
+            "images": [
+                "extracted_images/Treinamento 2/slide_6_img_17.png",
+                "extracted_images/Treinamento 2/slide_6_img_18.png",
+                "extracted_images/Treinamento 2/slide_6_img_19.jpg"
+            ]
+        },
+        {
+            "slide_number": 7,
+            "title": "",
+            "text": "Resumo Copilot",
+            "images": [
+                "extracted_images/Treinamento 2/slide_7_img_20.png",
+                "extracted_images/Treinamento 2/slide_7_img_21.png",
+                "extracted_images/Treinamento 2/slide_7_img_22.jpg"
+            ]
+        },
+        {
+            "slide_number": 8,
+            "title": "",
+            "text": "Controles de TI – Governança e Segurança",
+            "images": [
+                "extracted_images/Treinamento 2/slide_8_img_23.png",
+                "extracted_images/Treinamento 2/slide_8_img_24.png"
+            ]
+        },
+        {
+            "slide_number": 9,
+            "title": "",
+            "text": "Controles de TI – Governança e Segurança",
+            "images": [
+                "extracted_images/Treinamento 2/slide_9_img_25.png",
+                "extracted_images/Treinamento 2/slide_9_img_26.png",
+                "extracted_images/Treinamento 2/slide_9_img_27.png"
+            ]
+        },
+        {
+            "slide_number": 10,
+            "title": "",
+            "text": "Você já refletiu sobre o que pode acontecer se não monitorarmos o uso da IA e do Copilot na empresa?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_10_img_28.png"
+            ]
+        },
+        {
+            "slide_number": 11,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Treinamento 2/slide_11_img_29.png"
+            ]
+        },
+        {
+            "slide_number": 12,
+            "title": "",
+            "text": "Mais de 50% das empresas globais já incorporaram IA em processos. No Brasil, setores como varejo, financeiro e saúde lideram a adoção. IA tende a substituir tarefas repetitivas, mas cria novas funções estratégicas.",
+            "images": [
+                "extracted_images/Treinamento 2/slide_12_img_30.png",
+                "extracted_images/Treinamento 2/slide_12_img_31.png",
+                "extracted_images/Treinamento 2/slide_12_img_32.png",
+                "extracted_images/Treinamento 2/slide_12_img_33.png"
+            ]
+        },
+        {
+            "slide_number": 13,
+            "title": "",
+            "text": "Qual é o primeiro passo essencial para garantir segurança ao implementar o Copilot na empresa?\nForms",
+            "images": [
+                "extracted_images/Treinamento 2/slide_13_img_34.png",
+                "extracted_images/Treinamento 2/slide_13_img_35.png",
+                "extracted_images/Treinamento 2/slide_13_img_36.png"
+            ]
+        },
+        {
+            "slide_number": 14,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Treinamento 2/slide_14_img_37.png"
+            ]
+        },
+        {
+            "slide_number": 15,
+            "title": "",
+            "text": "Passo a Passo para adoção no Copilot\nAtribuir Licença\nFixar Copilot no Desktop e Teams\nAi Readiness\nMensagens Organizacionais\n1\n2\n4\n3",
+            "images": [
+                "extracted_images/Treinamento 2/slide_15_img_38.png",
+                "extracted_images/Treinamento 2/slide_15_img_39.png"
+            ]
+        },
+        {
+            "slide_number": 16,
+            "title": "",
+            "text": "Como fixar o Copilot no Desktop\nConfigurações - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/Treinamento 2/slide_16_img_40.png",
+                "extracted_images/Treinamento 2/slide_16_img_41.png",
+                "extracted_images/Treinamento 2/slide_16_img_42.png",
+                "extracted_images/Treinamento 2/slide_16_img_43.png",
+                "extracted_images/Treinamento 2/slide_16_img_44.png"
+            ]
+        },
+        {
+            "slide_number": 17,
+            "title": "",
+            "text": "Add a name for your app setup policy - Microsoft Teams admin center\nComo fixar o Copilot no Teams",
+            "images": [
+                "extracted_images/Treinamento 2/slide_17_img_45.png",
+                "extracted_images/Treinamento 2/slide_17_img_46.png",
+                "extracted_images/Treinamento 2/slide_17_img_47.png",
+                "extracted_images/Treinamento 2/slide_17_img_48.png",
+                "extracted_images/Treinamento 2/slide_17_img_49.png",
+                "extracted_images/Treinamento 2/slide_17_img_50.png"
+            ]
+        },
+        {
+            "slide_number": 18,
+            "title": "",
+            "text": "Chat\nChat gratuito e seguro com IA –\n alimentado por GPT 4o e aterrado pela web\nAgents\nIntegrado à experiência de chat e pago por consumo\nIT controls\nProteção de Dados Empresariais \ne gestão de agentes\nIntrodução ao Copilot e Copilot Studio",
+            "images": [
+                "extracted_images/Treinamento 2/slide_18_img_51.png",
+                "extracted_images/Treinamento 2/slide_18_img_52.png",
+                "extracted_images/Treinamento 2/slide_18_img_53.png",
+                "extracted_images/Treinamento 2/slide_18_img_54.png"
+            ]
+        },
+        {
+            "slide_number": 19,
+            "title": "",
+            "text": "O AI Readiness Assessment é uma avaliação que mede o nível de preparação da sua organização para adotar soluções de Inteligência Artificial (IA), incluindo ferramentas como o Microsoft Copilot.\nAi Readiness Assessment\nAssessments | AI Readiness Assessment\nAI Readiness Assessment - Oct 29, 2025 - 10:53:59 AM - Assessments | Microsoft Learn",
+            "images": [
+                "extracted_images/Treinamento 2/slide_19_img_55.png",
+                "extracted_images/Treinamento 2/slide_19_img_56.png",
+                "extracted_images/Treinamento 2/slide_19_img_57.png"
+            ]
+        },
+        {
+            "slide_number": 20,
+            "title": "",
+            "text": "Recomendações de Segurança Da Própria Microsoft no Copilot\nAI Baseline Assessment – Conformidade do Microsoft 365\nSistema de Controle ‎Copilot‎ - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/Treinamento 2/slide_20_img_58.png",
+                "extracted_images/Treinamento 2/slide_20_img_59.png",
+                "extracted_images/Treinamento 2/slide_20_img_60.png",
+                "extracted_images/Treinamento 2/slide_20_img_61.png"
+            ]
+        },
+        {
+            "slide_number": 21,
+            "title": "",
+            "text": "Mensagens Organizacionais\nMensagens organizacionais - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/Treinamento 2/slide_21_img_62.png",
+                "extracted_images/Treinamento 2/slide_21_img_63.png",
+                "extracted_images/Treinamento 2/slide_21_img_64.png",
+                "extracted_images/Treinamento 2/slide_21_img_65.png"
+            ]
+        },
+        {
+            "slide_number": 22,
+            "title": "",
+            "text": "Qual painel mostra métricas de engajamento e impacto do uso do Copilot na empresa?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_22_img_66.png",
+                "extracted_images/Treinamento 2/slide_22_img_67.png"
+            ]
+        },
+        {
+            "slide_number": 23,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Treinamento 2/slide_23_img_68.png"
+            ]
+        },
+        {
+            "slide_number": 24,
+            "title": "",
+            "text": "O Viva Insights Copilot é um recurso dentro do Microsoft Viva que combina inteligência artificial com análises avançadas para ajudar líderes, gestores e analistas a entender como o Microsoft 365 Copilot está sendo usado na organização e qual é seu impacto na produtividade.\nO que é o Viva Insights?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_24_img_69.png",
+                "extracted_images/Treinamento 2/slide_24_img_70.png",
+                "extracted_images/Treinamento 2/slide_24_img_71.png"
+            ]
+        },
+        {
+            "slide_number": 25,
+            "title": "",
+            "text": "Como configurar o Viva Insights o Painel do Copilot?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_25_img_72.png",
+                "extracted_images/Treinamento 2/slide_25_img_73.png",
+                "extracted_images/Treinamento 2/slide_25_img_74.png",
+                "extracted_images/Treinamento 2/slide_25_img_75.png"
+            ]
+        },
+        {
+            "slide_number": 26,
+            "title": "",
+            "text": "O Copilot Pulse é um recurso integrado ao Microsoft Viva Pulse que ajuda líderes e administradores a medir o impacto e a percepção do uso do Microsoft 365 Copilot dentro da organização. Ele funciona como um mecanismo de pesquisa rápida (Pulse surveys) para capturar feedback e sentimento dos usuários sobre a adoção do Copilot, complementando métricas técnicas com dados qualitativos.\nO que é o Viva Pulse?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_26_img_76.png",
+                "extracted_images/Treinamento 2/slide_26_img_77.png",
+                "extracted_images/Treinamento 2/slide_26_img_78.png",
+                "extracted_images/Treinamento 2/slide_26_img_79.png",
+                "extracted_images/Treinamento 2/slide_26_img_80.png",
+                "extracted_images/Treinamento 2/slide_26_img_81.png"
+            ]
+        },
+        {
+            "slide_number": 27,
+            "title": "",
+            "text": "O que é o Viva Pulse?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_27_img_82.png",
+                "extracted_images/Treinamento 2/slide_27_img_83.png",
+                "extracted_images/Treinamento 2/slide_27_img_84.png",
+                "extracted_images/Treinamento 2/slide_27_img_85.png"
+            ]
+        },
+        {
+            "slide_number": 28,
+            "title": "",
+            "text": "Resultados do Viva",
+            "images": [
+                "extracted_images/Treinamento 2/slide_28_img_86.png",
+                "extracted_images/Treinamento 2/slide_28_img_87.png",
+                "extracted_images/Treinamento 2/slide_28_img_88.png",
+                "extracted_images/Treinamento 2/slide_28_img_89.png"
+            ]
+        },
+        {
+            "slide_number": 29,
+            "title": "",
+            "text": "Quais métricas você pode visualizar no Microsoft 365 Admin Center para acompanhar o uso do Copilot?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_29_img_90.png",
+                "extracted_images/Treinamento 2/slide_29_img_91.png"
+            ]
+        },
+        {
+            "slide_number": 30,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Treinamento 2/slide_30_img_92.png"
+            ]
+        },
+        {
+            "slide_number": 31,
+            "title": "",
+            "text": "Tipos de Agentes",
+            "images": [
+                "extracted_images/Treinamento 2/slide_31_img_93.png",
+                "extracted_images/Treinamento 2/slide_31_img_94.png",
+                "extracted_images/Treinamento 2/slide_31_img_95.jpg",
+                "extracted_images/Treinamento 2/slide_31_img_96.jpg",
+                "extracted_images/Treinamento 2/slide_31_img_97.jpg",
+                "extracted_images/Treinamento 2/slide_31_img_98.jpg",
+                "extracted_images/Treinamento 2/slide_31_img_99.jpg",
+                "extracted_images/Treinamento 2/slide_31_img_100.png"
+            ]
+        },
+        {
+            "slide_number": 32,
+            "title": "",
+            "text": "Tipos de Agentes",
+            "images": [
+                "extracted_images/Treinamento 2/slide_32_img_101.png",
+                "extracted_images/Treinamento 2/slide_32_img_102.png",
+                "extracted_images/Treinamento 2/slide_32_img_103.png",
+                "extracted_images/Treinamento 2/slide_32_img_104.png",
+                "extracted_images/Treinamento 2/slide_32_img_105.png",
+                "extracted_images/Treinamento 2/slide_32_img_106.png",
+                "extracted_images/Treinamento 2/slide_32_img_107.png"
+            ]
+        },
+        {
+            "slide_number": 33,
+            "title": "",
+            "text": "Tipos de Agentes",
+            "images": [
+                "extracted_images/Treinamento 2/slide_33_img_108.png",
+                "extracted_images/Treinamento 2/slide_33_img_109.png",
+                "extracted_images/Treinamento 2/slide_33_img_110.png",
+                "extracted_images/Treinamento 2/slide_33_img_111.png",
+                "extracted_images/Treinamento 2/slide_33_img_112.png",
+                "extracted_images/Treinamento 2/slide_33_img_113.png",
+                "extracted_images/Treinamento 2/slide_33_img_114.png"
+            ]
+        },
+        {
+            "slide_number": 34,
+            "title": "",
+            "text": "Instalação e Deploy do Copilot e Copilot Studio",
+            "images": [
+                "extracted_images/Treinamento 2/slide_34_img_115.png",
+                "extracted_images/Treinamento 2/slide_34_img_116.png",
+                "extracted_images/Treinamento 2/slide_34_img_117.png",
+                "extracted_images/Treinamento 2/slide_34_img_118.png",
+                "extracted_images/Treinamento 2/slide_34_img_119.png",
+                "extracted_images/Treinamento 2/slide_34_img_120.png",
+                "extracted_images/Treinamento 2/slide_34_img_121.png",
+                "extracted_images/Treinamento 2/slide_34_img_122.png"
+            ]
+        },
+        {
+            "slide_number": 35,
+            "title": "",
+            "text": "Como começar o Monitoramento do Copilot?\nPontuação de Adoção - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/Treinamento 2/slide_35_img_123.png",
+                "extracted_images/Treinamento 2/slide_35_img_124.png",
+                "extracted_images/Treinamento 2/slide_35_img_125.png",
+                "extracted_images/Treinamento 2/slide_35_img_126.png",
+                "extracted_images/Treinamento 2/slide_35_img_127.png",
+                "extracted_images/Treinamento 2/slide_35_img_128.png"
+            ]
+        },
+        {
+            "slide_number": 36,
+            "title": "",
+            "text": "Como começar o Monitoramento do Copilot?\nUso - admin center do Microsoft 365\nMicrosoft 365 admin Center",
+            "images": [
+                "extracted_images/Treinamento 2/slide_36_img_129.png",
+                "extracted_images/Treinamento 2/slide_36_img_130.png",
+                "extracted_images/Treinamento 2/slide_36_img_131.png"
+            ]
+        },
+        {
+            "slide_number": 37,
+            "title": "",
+            "text": "Qual é a principal função dos Agentes 365 no Microsoft 365 Admin Center?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_37_img_132.png",
+                "extracted_images/Treinamento 2/slide_37_img_133.png"
+            ]
+        },
+        {
+            "slide_number": 38,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Treinamento 2/slide_38_img_134.png"
+            ]
+        },
+        {
+            "slide_number": 39,
+            "title": "",
+            "text": "Agents 365\nUso - admin center do Microsoft 365",
+            "images": [
+                "extracted_images/Treinamento 2/slide_39_img_135.png",
+                "extracted_images/Treinamento 2/slide_39_img_136.png",
+                "extracted_images/Treinamento 2/slide_39_img_137.png",
+                "extracted_images/Treinamento 2/slide_39_img_138.png",
+                "extracted_images/Treinamento 2/slide_39_img_139.png"
+            ]
+        },
+        {
+            "slide_number": 40,
+            "title": "",
+            "text": "Agents 365\nUso - admin center do Microsoft 365\nO que são Servidores MCP? (Microsoft Connector Platform)\nSão conectores seguros que permitem que agentes e fluxos de IA acessem dados e executem ações em aplicativos Microsoft (SharePoint, Teams, Outlook, etc.) sem precisar criar integrações manuais.\u000bEles garantem governança, autenticação e padronização",
+            "images": [
+                "extracted_images/Treinamento 2/slide_40_img_140.png",
+                "extracted_images/Treinamento 2/slide_40_img_141.png",
+                "extracted_images/Treinamento 2/slide_40_img_142.png",
+                "extracted_images/Treinamento 2/slide_40_img_143.png"
+            ]
+        },
+        {
+            "slide_number": 41,
+            "title": "",
+            "text": "FORMS\nQual é a principal função do Copilot Studio Kit?",
+            "images": [
+                "extracted_images/Treinamento 2/slide_41_img_144.png",
+                "extracted_images/Treinamento 2/slide_41_img_145.png"
+            ]
+        },
+        {
+            "slide_number": 42,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Treinamento 2/slide_42_img_146.png"
+            ]
+        },
+        {
+            "slide_number": 43,
+            "title": "",
+            "text": "O que é o Copilot Studio Kit Analytics?\nInventário de agentes: visão geral de todos os agentes no tenant, com detalhes sobre recursos, autenticação e fontes de conhecimento.\nKPIs de conversação: métricas agregadas para medir desempenho (taxa de engajamento, resolução, abandono, CSAT).\nTestes automatizados: simulação de cenários para validar respostas e qualidade.\nIntegração com Power BI: dashboards prontos para análise avançada.\nSincronização com SharePoint: para enriquecer a base de conhecimento dos agentes.\nO relatório de Copilot Studio\nInventário de agentes\nRecursos utilizados\nMakers e ambientes\nConectores, fluxos, volumetrias e afins\nTestes e revisão segurança\nHomeCoE - Dynamics 365\nO Copilot Studio Kit é um conjunto de ferramentas criado para aprimorar a experiência no Microsoft Copilot Studio, ajudando desenvolvedores e makers a criar, testar e otimizar agentes personalizados (copilots) com IA generativa. Ele é mantido pelo Power CAT (Customer Advisory Team) e oferece recursos avançados para governança, testes e personalização.",
+            "images": [
+                "extracted_images/Treinamento 2/slide_43_img_147.png",
+                "extracted_images/Treinamento 2/slide_43_img_148.png",
+                "extracted_images/Treinamento 2/slide_43_img_149.png",
+                "extracted_images/Treinamento 2/slide_43_img_150.png",
+                "extracted_images/Treinamento 2/slide_43_img_151.png"
+            ]
+        },
+        {
+            "slide_number": 44,
+            "title": "",
+            "text": "Qual é o principal objetivo do DSPM (Data Security Posture Management) para IA no Microsoft Purview?\nFORMS",
+            "images": [
+                "extracted_images/Treinamento 2/slide_44_img_152.png"
+            ]
+        },
+        {
+            "slide_number": 45,
+            "title": "",
+            "text": "",
+            "images": [
+                "extracted_images/Treinamento 2/slide_45_img_153.png"
+            ]
+        },
+        {
+            "slide_number": 46,
+            "title": "",
+            "text": "DSPM AI\nInventário de agentes: visão geral de todos os agentes no tenant, com detalhes sobre recursos, autenticação e fontes de conhecimento.\nKPIs de conversação: métricas agregadas para medir desempenho (taxa de engajamento, resolução, abandono, CSAT).\nTestes automatizados: simulação de cenários para validar respostas e qualidade.\nIntegração com Power BI: dashboards prontos para análise avançada.\nSincronização com SharePoint: para enriquecer a base de conhecimento dos agentes.",
+            "images": [
+                "extracted_images/Treinamento 2/slide_46_img_154.png",
+                "extracted_images/Treinamento 2/slide_46_img_155.png",
+                "extracted_images/Treinamento 2/slide_46_img_156.png"
+            ]
+        },
+        {
+            "slide_number": 47,
+            "title": "Obrigado!!",
+            "text": "Obrigado!!",
+            "images": []
+        }
+    ]
+}
